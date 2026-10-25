@@ -1,0 +1,10 @@
+services:
+  studio:
+    build: .
+    ports:
+      - "127.0.0.1:8000:8000"   # only reachable from this computer
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      DEMO_MODE: ${DEMO_MODE:-1}

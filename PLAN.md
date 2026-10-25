@@ -23,7 +23,7 @@ A demo build on sample data: Claude set up for a fictional insurance agency, wit
               │
               ├── skills/<name>/scripts/*.py   exact maths and checks (pure Python, pandas)
               ├── agency/llm.py                 writer: Claude (real mode) or recorded fixtures (demo mode)
-              ├── agency/guards.py              number placeholders, FAQ citation check, quote source check
+              ├── skills/*/scripts (checks)      number placeholders, FAQ citation check, quote source check
               └── connector/tools.py            read-only queries over data/ (same code the MCP server exposes)
 
  Claude Desktop / Claude Code ──stdio──> connector/server.py (MCP, 4 read-only tools)
@@ -54,7 +54,7 @@ Core rule: code computes, Claude writes, a person approves.
 skills/            four Agent Skills (SKILL.md + scripts/ + reference/)
 claude-project/    project instructions, knowledge files, setup guide
 connector/         MCP server (stdio) + shared read-only tools
-agency/            shared app code: config, llm client, guards, pdf
+agency/            shared app code: config, llm client, services, pdf
 studio/            FastAPI app, templates, static (htmx vendored)
 data/              generated sample data
 fixtures/llm/      recorded model responses for demo mode

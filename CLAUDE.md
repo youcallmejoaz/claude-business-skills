@@ -7,7 +7,7 @@ Claude Business Setup Kit: a demo build on sample data that sets Claude up for a
 - `skills/<name>/` Agent Skills: `SKILL.md`, `scripts/` (exact maths and checks), `reference/`
 - `claude-project/` project instructions, knowledge files (FAQ is the source of truth), setup guide
 - `connector/` MCP server (stdio). `tools.py` holds the read-only queries; `server.py` exposes them
-- `agency/` shared app code: `config.py`, `llm.py` (real or replay), `guards.py`, `pdf.py`, `skill_runner.py`
+- `agency/` shared app code: `config.py`, `llm.py` (Claude or recorded replay), `services.py` (one function per skill), `offline.py` (rule-based demo drafts), `pdf.py`, `skill_runner.py`. The checks themselves live in the skills' scripts
 - `studio/` FastAPI + Jinja2 + HTMX app, no frontend build step
 - `data/` generated sample data (fictional). `fixtures/llm/` recorded model responses for demo mode
 - `evals/` 12 cases and the runner. `tests/` pytest. `scripts/` seed and helpers
@@ -22,6 +22,7 @@ make dev         # Skills Studio on http://127.0.0.1:8000 (demo mode)
 make test        # pytest
 make evals       # 12 eval cases, prints pass rate
 make mcp         # run the MCP connector on stdio
+make package-skills  # zip each skill for upload to Claude
 docker compose up
 ```
 

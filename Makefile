@@ -1,7 +1,7 @@
 PY ?= .venv/bin/python
 export DEMO_MODE ?= 1
 
-.PHONY: install seed dev test evals mcp record-fixtures clips counts
+.PHONY: install seed dev test evals mcp record-fixtures clips counts package-skills
 
 install:
 	python3 -m venv .venv
@@ -30,3 +30,6 @@ clips:
 
 counts:
 	$(PY) scripts/count_chars.py docs/UPWORK_PORTFOLIO.md
+
+package-skills:
+	$(PY) scripts/package_skills.py
