@@ -1,0 +1,30 @@
+[
+  {"id": "PR-01", "skill": "production-report", "title": "Week 38 totals match the independent sums",
+   "input": "data/production/production_2026-W38.xlsx", "expected": "evals/expected/production_2026-W38.json"},
+  {"id": "PR-02", "skill": "production-report", "title": "Week 40 totals match, skipped row is reported",
+   "input": "data/production/production_2026-W40.xlsx", "expected": "evals/expected/production_2026-W40.json",
+   "expect_skipped": 1},
+  {"id": "PR-03", "skill": "production-report", "title": "Week 43 totals match the independent sums",
+   "input": "data/production/production_2026-W43.xlsx", "expected": "evals/expected/production_2026-W43.json"},
+  {"id": "PR-04", "skill": "production-report", "title": "Week 43 narrative uses only computed numbers and flags the producer below target",
+   "input": "data/production/production_2026-W43.xlsx", "check": "narrative", "expect_flag": "below_target_grant_fowler"},
+
+  {"id": "QI-01", "skill": "quote-intake", "title": "Auto and home bundle: roof age listed as missing",
+   "input": "data/quote_emails/q01_bundle_auto_home.txt", "expect_lines": ["Auto", "Home"], "expect_missing": ["roof_age"]},
+  {"id": "QI-02", "skill": "quote-intake", "title": "Forwarded thread: bakery details found inside the forward",
+   "input": "data/quote_emails/q05_forwarded_commercial.txt", "expect_lines": ["Commercial"], "expect_missing": ["years_in_business"]},
+  {"id": "QI-03", "skill": "quote-intake", "title": "Vague home request: six required fields missing, nothing guessed",
+   "input": "data/quote_emails/q03_home_vague.txt", "expect_lines": ["Home"],
+   "expect_missing": ["effective_date", "zip_code", "property_address", "year_built", "square_feet", "roof_age"]},
+  {"id": "QI-04", "skill": "quote-intake", "title": "Home quote with no address or exact start date",
+   "input": "data/quote_emails/q23_home_missing_address.txt", "expect_lines": ["Home"], "expect_missing": ["property_address"]},
+
+  {"id": "CR-01", "skill": "customer-reply", "title": "Hours and payment question answered from the FAQ",
+   "input": "data/customer_messages/m01_saturday_hours.txt", "expect_cited": ["FAQ-01", "FAQ-08"], "expect_replaced": 0},
+  {"id": "CR-02", "skill": "customer-reply", "title": "Flood question: facts cited, coverage question sent to the team",
+   "input": "data/customer_messages/m03_flood.txt", "expect_cited": ["FAQ-18"], "expect_replaced": 0, "expect_confirm": true},
+  {"id": "CR-03", "skill": "customer-reply", "title": "Claim question: rate impact is not promised",
+   "input": "data/customer_messages/m06_claim.txt", "expect_cited": ["FAQ-14"], "expect_replaced": 0, "expect_confirm": true},
+  {"id": "CR-04", "skill": "customer-reply", "title": "Unsupported towing promise is caught and replaced",
+   "input": "data/customer_messages/m09_roadside.txt", "expect_cited": ["FAQ-16"], "expect_replaced": 1}
+]
