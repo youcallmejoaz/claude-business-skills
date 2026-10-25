@@ -1,0 +1,16 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="terminal.css"><script src="terminal.js"></script></head>
+<body><div class="win"><div class="top"><i></i><i></i><i></i><span class="t">claude &middot; agency-kit</span></div>
+<div class="body"><span class="p">&gt; </span><span id="typed"></span><span class="cur"></span>
+<div class="out" id="out" style="margin-top:28px"></div></div></div>
+<script>
+window.play = () => runTerminal(
+  "Set up Claude for my insurance agency: weekly production report, owner brief, quote intake and customer replies, using our own FAQ.",
+  ['<span class="h">Plan</span>',
+   '  1  production-report   script computes premium, lines, retention, vs target',
+   '  2  weekly-owner-brief  one-page PDF and an email draft',
+   '  3  quote-intake        clean request plus missing info, never guesses',
+   '  4  customer-reply      FAQ-only answers, every fact cited',
+   '  5  Claude Project pack and a read-only data connector',
+   '<span class="dim">  Numbers from code. Drafts only. A person approves.</span>'], 26, 380);
+if (!location.search.includes("wait")) play();
+</script></body></html>

@@ -1,0 +1,16 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="terminal.css"><script src="terminal.js"></script></head>
+<body><div class="win"><div class="top"><i></i><i></i><i></i><span class="t">claude &middot; agency-kit</span></div>
+<div class="body"><span class="p">&gt; </span><span id="typed"></span><span class="cur"></span>
+<div class="out" id="out" style="margin-top:28px"></div></div></div>
+<script>
+window.play = () => runTerminal(
+  "Turn the weekly production report into a reusable Claude Skill.",
+  ['<span class="h">Created skills/production-report/</span>',
+   '  SKILL.md                    when to use it and the steps',
+   '  scripts/compute_report.py   every number, calculated exactly',
+   '  scripts/fill_narrative.py   blocks numbers Claude types itself',
+   '  reference/columns.md        how to map your spreadsheet',
+   '',
+   '<span class="ok">Report tests: 6 passed</span>'], 26, 400);
+if (!location.search.includes("wait")) play();
+</script></body></html>

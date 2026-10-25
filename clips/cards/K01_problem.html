@@ -1,0 +1,20 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="card.css">
+<style>
+.row { display: flex; gap: 56px; margin-top: 70px; align-items: center; }
+.tile { border: 3px solid #dfe7e3; border-radius: 26px; padding: 30px 40px; font-size: 44px; font-weight: 700; display: flex; align-items: center; gap: 22px; white-space: nowrap; }
+.dots { display: flex; gap: 10px; } .dots i { width: 26px; height: 26px; border-radius: 50%; background: #1f7a4d; display: block; }
+.grid { width: 70px; height: 54px; border: 4px solid #14201b; border-radius: 6px; background: repeating-linear-gradient(0deg, transparent 0 14px, #14201b 14px 17px), repeating-linear-gradient(90deg, transparent 0 20px, #14201b 20px 23px); }
+.clock { width: 60px; height: 60px; border: 5px solid #b42318; border-radius: 50%; position: relative; }
+.clock::before { content: ""; position: absolute; left: 25px; top: 8px; width: 5px; height: 22px; background: #b42318; }
+.clock::after { content: ""; position: absolute; left: 25px; top: 25px; width: 18px; height: 5px; background: #b42318; }
+</style></head><body><div class="stage">
+<div class="kicker in d1">Monday morning</div>
+<h1 class="in d2">Two hours of<br><span class="red">copy and paste.</span></h1>
+<div class="row">
+  <div class="tile in d3"><span class="dots"><i></i><i></i><i></i><i></i><i></i><i></i></span>6 producers</div>
+  <div class="tile in d4"><span class="grid"></span>One spreadsheet</div>
+  <div class="tile in d5"><span class="clock"></span><span class="red">Two hours</span></div>
+</div>
+</div><div class="bar"></div>
+<script>window.play = () => document.body.classList.add("go"); if (!location.search.includes("wait")) play();</script>
+</body></html>

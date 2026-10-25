@@ -1,0 +1,26 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="card.css">
+<style>
+.flow { display: flex; align-items: stretch; gap: 26px; margin-top: 80px; }
+.box { flex: 1; border-radius: 28px; padding: 40px 34px; border: 3px solid #dfe7e3; }
+.box .n { width: 64px; height: 64px; border-radius: 50%; display: grid; place-items: center; font-size: 34px; font-weight: 800; margin-bottom: 26px; background: #eef3f0; }
+.box b { display: block; font-size: 44px; line-height: 1.15; }
+.box span { display: block; font-size: 30px; color: #5a6a62; margin-top: 14px; line-height: 1.3; }
+.box.code { border-color: #bfe3cd; background: #f3fbf6; } .box.code .n { background: #1f7a4d; color: #fff; }
+.box.ai { border-color: #c9d8f0; background: #f4f7fd; } .box.ai .n { background: #2457a6; color: #fff; }
+.box.you { border-color: #f1d9a6; background: #fdf8ec; } .box.you .n { background: #b7791f; color: #fff; }
+.arrow { align-self: center; font-size: 64px; color: #b9cbc2; font-weight: 300; }
+</style></head><body><div class="stage">
+<div class="kicker in d1">How a skill works</div>
+<h1 class="in d1" style="font-size:80px">Code does the maths. Claude writes.<br>A person approves.</h1>
+<div class="flow">
+  <div class="box in d2"><div class="n">1</div><b>File in</b><span>This week's spreadsheet or a customer email</span></div>
+  <div class="arrow in d2">&rarr;</div>
+  <div class="box code in d3"><div class="n">2</div><b>Script does the maths</b><span>Every number calculated exactly</span></div>
+  <div class="arrow in d3">&rarr;</div>
+  <div class="box ai in d4"><div class="n">3</div><b>Claude writes</b><span>The explanation, the email, the reply</span></div>
+  <div class="arrow in d4">&rarr;</div>
+  <div class="box you in d5"><div class="n">4</div><b>A person approves</b><span>Nothing goes out on its own</span></div>
+</div>
+</div><div class="bar"></div>
+<script>window.play = () => document.body.classList.add("go"); if (!location.search.includes("wait")) play();</script>
+</body></html>

@@ -1,0 +1,31 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="card.css">
+<style>
+.cols { display: flex; gap: 70px; margin-top: 60px; }
+ul { list-style: none; flex: 1.4; }
+li { font-size: 42px; line-height: 1.3; padding: 18px 0 18px 64px; position: relative; border-bottom: 2px solid #eef3f0; }
+li::before { content: ""; position: absolute; left: 0; top: 28px; width: 34px; height: 34px; border-radius: 50%; background: #1f7a4d; }
+li::after { content: ""; position: absolute; left: 10px; top: 36px; width: 12px; height: 7px; border-left: 4px solid #fff; border-bottom: 4px solid #fff; transform: rotate(-45deg); }
+.side { flex: 1; display: flex; flex-direction: column; gap: 28px; }
+.pill { border-radius: 26px; padding: 34px 38px; }
+.pill b { display: block; font-size: 58px; }
+.pill span { font-size: 32px; color: #3d4a44; }
+.week { background: #e9f6ee; } .week b { color: #1f7a4d; }
+.cost { background: #fdf6e3; } .cost b { color: #b7791f; font-size: 46px; }
+</style></head><body><div class="stage">
+<div class="kicker in d1">A version for your agency</div>
+<h1 class="in d1" style="font-size:80px">Your files. Your answers. Your rules.</h1>
+<div class="cols">
+  <ul>
+    <li class="in d2">Your spreadsheet columns mapped</li>
+    <li class="in d3">Your FAQ, tone and quote checklist</li>
+    <li class="in d4">The four skills and the data connector</li>
+    <li class="in d5">Evals on your own examples</li>
+  </ul>
+  <div class="side">
+    <div class="pill week in d4"><b>Set up in a week</b><span>Ready to use in your own Claude</span></div>
+    <div class="pill cost in d5"><b>A few cents per report</b><span>Estimated running cost, plus your Claude plan</span></div>
+  </div>
+</div>
+</div><div class="bar"></div>
+<script>window.play = () => document.body.classList.add("go"); if (!location.search.includes("wait")) play();</script>
+</body></html>

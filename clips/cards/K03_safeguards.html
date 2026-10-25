@@ -1,0 +1,20 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="card.css">
+<style>
+.list { margin-top: 64px; display: flex; flex-direction: column; gap: 30px; }
+.item { display: flex; align-items: center; gap: 40px; border-radius: 26px; padding: 34px 44px; border-left: 16px solid; }
+.item b { font-size: 56px; min-width: 520px; }
+.item span { font-size: 40px; color: #3d4a44; }
+.g { border-color: #1f7a4d; background: #e9f6ee; } .g b { color: #1f7a4d; }
+.a { border-color: #d9a21b; background: #fdf6e3; } .a b { color: #b7791f; }
+.r { border-color: #b42318; background: #fdecec; } .r b { color: #b42318; }
+</style></head><body><div class="stage">
+<div class="kicker in d1">Safeguards</div>
+<h1 class="in d1" style="font-size:84px">Built so it cannot make things up.</h1>
+<div class="list">
+  <div class="item g in d2"><b>Exact numbers</b><span>Calculated by code, never by Claude</span></div>
+  <div class="item a in d3"><b>FAQ-only answers</b><span>Every fact points to its source</span></div>
+  <div class="item r in d4"><b>Drafts, not sends</b><span>A person approves everything</span></div>
+</div>
+</div><div class="bar"></div>
+<script>window.play = () => document.body.classList.add("go"); if (!location.search.includes("wait")) play();</script>
+</body></html>

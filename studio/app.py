@@ -58,7 +58,9 @@ async def _workbook(sample: str | None, upload: UploadFile | None) -> tuple[str,
         if not upload.filename.lower().endswith((".xlsx", ".xlsm")):
             raise HTTPException(400, "Please choose an Excel file (.xlsx).")
         token = uuid.uuid4().hex[:12]
-        path = UPLOADS / f"{token}.xlsx"
+        safe = "".join(c for c in Path(upload.filename).name if c.isalnum() or c in "._- ") or "upload.xlsx"
+        (UPLOADS / token).mkdir()
+        path = UPLOADS / token / safe  # keep the owner's file name so the report cites it
         with open(path, "wb") as f:
             shutil.copyfileobj(upload.file, f)
         _files[token] = path
