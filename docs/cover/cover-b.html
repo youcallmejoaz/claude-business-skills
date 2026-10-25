@@ -1,0 +1,30 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 1600px; height: 1200px; overflow: hidden; }
+body { background: #10201a; color: #fff; font-family: Inter, sans-serif; position: relative; }
+.head { position: absolute; left: 90px; right: 90px; top: 104px; text-align: center; }
+h1 { font-size: 100px; line-height: 1.04; font-weight: 800; letter-spacing: -0.03em; }
+h1 span { color: #5fd394; }
+.chips { display: flex; justify-content: center; gap: 14px; margin-top: 30px; }
+.chip { font-size: 25px; font-weight: 600; color: #5fd394; border: 2px solid #2f5c46; border-radius: 999px; padding: 9px 22px; }
+.browser { position: absolute; left: 150px; top: 444px; width: 1300px; border-radius: 16px; overflow: hidden; background: #fff; box-shadow: 0 30px 80px rgba(0,0,0,.45); }
+.bar { height: 44px; background: #e8eeeb; display: flex; align-items: center; gap: 9px; padding: 0 18px; }
+.bar b { width: 13px; height: 13px; border-radius: 50%; background: #c9d6cf; display: block; }
+.bar .url { margin-left: 14px; flex: 1; height: 26px; border-radius: 8px; background: #fff; font-size: 15px; color: #6b7a72; display: flex; align-items: center; padding: 0 12px; }
+.browser img { display: block; width: 100%; height: 500px; object-fit: cover; object-position: top; }
+.tiles { position: absolute; left: 90px; right: 90px; bottom: 74px; display: flex; gap: 18px; }
+.tile { flex: 1; background: #17302a; border: 2px solid #2f5c46; border-radius: 16px; padding: 18px 20px; font-size: 26px; font-weight: 700; text-align: center; }
+.tag { position: absolute; right: 90px; top: 64px; font-size: 19px; font-weight: 600; color: #8fb5a2; }
+</style></head><body>
+<div class="tag">Built with Claude Code</div>
+<div class="head">
+  <h1>Claude Set Up For<br><span>Your Agency</span></h1>
+  <div class="chips"><span class="chip">Exact numbers</span><span class="chip">FAQ-only replies</span><span class="chip">Drafts, not sends</span></div>
+</div>
+<div class="browser"><div class="bar"><b></b><b></b><b></b><div class="url">Skills Studio &middot; Weekly production report</div></div>
+<img src="report-screen.png" alt=""></div>
+<div class="tiles"><div class="tile">Production Report</div><div class="tile">Owner Brief</div><div class="tile">Quote Intake</div><div class="tile">Customer Reply</div></div>
+</body></html>

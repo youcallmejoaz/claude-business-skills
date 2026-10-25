@@ -1,0 +1,36 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 1600px; height: 1200px; overflow: hidden; }
+body { background: #f4f7f5; color: #14201b; font-family: Inter, sans-serif; position: relative; }
+.head { position: absolute; left: 90px; top: 90px; right: 90px; }
+h1 { font-size: 104px; line-height: 1.02; font-weight: 800; letter-spacing: -0.03em; }
+h1 span { color: #1f7a4d; }
+.chips { display: flex; gap: 14px; margin-top: 34px; }
+.chip { font-size: 25px; font-weight: 600; color: #1f7a4d; background: #e3f4ea; border-radius: 999px; padding: 10px 22px; }
+.tiles { position: absolute; left: 90px; top: 500px; width: 300px; display: flex; flex-direction: column; gap: 16px; }
+.tile { background: #fff; border: 2px solid #dfe7e3; border-radius: 18px; padding: 20px 22px; font-size: 27px; font-weight: 700; display: flex; align-items: center; gap: 14px; box-shadow: 0 4px 14px rgba(20,32,27,.05); }
+.tile i { width: 40px; height: 40px; border-radius: 10px; background: #1f7a4d; color: #fff; font-style: normal; display: grid; place-items: center; font-size: 22px; flex: none; }
+.browser { position: absolute; left: 430px; top: 470px; width: 1080px; border-radius: 16px; overflow: hidden; background: #fff; box-shadow: 0 24px 60px rgba(20,32,27,.18); border: 1px solid #dfe7e3; }
+.bar { height: 44px; background: #eef3f0; display: flex; align-items: center; gap: 9px; padding: 0 18px; }
+.bar b { width: 13px; height: 13px; border-radius: 50%; background: #c9d6cf; display: block; }
+.bar .url { margin-left: 14px; flex: 1; height: 26px; border-radius: 8px; background: #fff; font-size: 15px; color: #6b7a72; display: flex; align-items: center; padding: 0 12px; }
+.browser img { display: block; width: 100%; }
+.tag { position: absolute; right: 90px; bottom: 74px; font-size: 21px; font-weight: 600; color: #5a6a62; }
+</style></head><body>
+<div class="head">
+  <h1>Your Monday Report,<br><span>Done By Claude</span></h1>
+  <div class="chips"><span class="chip">Exact numbers</span><span class="chip">FAQ-only replies</span><span class="chip">Drafts, not sends</span></div>
+</div>
+<div class="tiles">
+  <div class="tile"><i>1</i>Production Report</div>
+  <div class="tile"><i>2</i>Owner Brief</div>
+  <div class="tile"><i>3</i>Quote Intake</div>
+  <div class="tile"><i>4</i>Customer Reply</div>
+</div>
+<div class="browser"><div class="bar"><b></b><b></b><b></b><div class="url">Skills Studio &middot; Weekly production report</div></div>
+<img src="report-screen.png" alt=""></div>
+<div class="tag">Built with Claude Code</div>
+</body></html>
