@@ -1,0 +1,13 @@
+anthropic
+fastapi
+uvicorn
+jinja2
+python-multipart
+pandas
+openpyxl
+mcp
+weasyprint
+pypdfium2
+python-dotenv
+pytest
+httpx

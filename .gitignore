@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.env
+out/
+clips/raw/
+clips/tmp/
+node_modules/
+*.egg-info/
+.DS_Store
