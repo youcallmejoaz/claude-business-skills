@@ -1,7 +1,7 @@
 PY ?= .venv/bin/python
 export DEMO_MODE ?= 1
 
-.PHONY: install seed dev test evals mcp record-fixtures clips counts package-skills
+.PHONY: install seed dev test evals mcp record-fixtures clips counts package-skills proposal-cut
 
 install:
 	python3 -m venv .venv
@@ -33,3 +33,7 @@ counts:
 
 package-skills:
 	$(PY) scripts/package_skills.py
+
+# Voice: run clips/tts_kokoro.py with a Python that has kokoro-onnx and the model files first.
+proposal-cut:
+	$(PY) clips/make_proposal_cut.py
