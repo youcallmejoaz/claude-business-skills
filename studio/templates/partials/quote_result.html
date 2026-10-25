@@ -1,0 +1,35 @@
+{% from "macros.html" import writer_tag %}
+<div class="fade-in">
+<section class="card">
+  <div class="card-head"><h2>Structured quote request</h2>{{ writer_tag(out.writer) }}</div>
+  <div class="lines">{% for l in res.lines %}<span class="pill green">{{ l }}</span>{% else %}<span class="pill amber">Line not stated</span>{% endfor %}
+    <span class="tag code">{{ res.fields|length }} fields checked against the email</span></div>
+  <div class="table-wrap"><table class="qfield" id="quote-fields">
+    {% for f in res.fields %}
+    <tr><td class="k">{{ f.label }}</td><td class="v"><input type="text" value="{{ f.value }}" aria-label="{{ f.label }}"><div class="src">{{ f.source }}</div></td></tr>
+    {% endfor %}
+  </table></div>
+  {% if res.rejected %}
+  <div class="rejected"><b>Removed because they could not be verified in the email:</b>
+    {% for r in res.rejected %}<div>{{ r.label }}: "{{ r.value }}" ({{ r.reason }})</div>{% endfor %}</div>
+  {% endif %}
+  {% if res.missing %}
+  <div class="missing" id="missing">
+    <h2>Missing information ({{ res.missing|length }} of {{ res.required_count }} required)</h2>
+    <ul>{% for m in res.missing %}<li><b>{{ m.label }}</b> {{ m.question }}</li>{% endfor %}</ul>
+    <div class="label" style="margin-top:10px">Questions to send the customer</div>
+    <div class="copyblock" id="questions">{% for q in res.questions_for_customer %}{{ loop.index }}. {{ q }}
+{% endfor %}</div>
+  </div>
+  {% else %}
+  <div class="complete">All {{ res.required_count }} required fields are in the email. Ready for a producer to quote.</div>
+  {% endif %}
+  {% if out.extraction.notes %}<div class="sources"><b>Notes for the producer:</b> {{ out.extraction.notes }}</div>{% endif %}
+</section>
+<div class="approve-bar">
+  <span class="note">Draft for review. Nothing has been sent.</span>
+  <button class="btn approve" type="button" onclick="approve(this)">Approve request</button>
+  <button class="btn disabled" type="button" data-after-approve onclick="copyText(this, 'quote-fields')">Copy request</button>
+  {% if res.missing %}<button class="btn disabled" type="button" data-after-approve onclick="copyText(this, 'questions')">Copy questions</button>{% endif %}
+</div>
+</div>

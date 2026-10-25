@@ -1,0 +1,58 @@
+{% from "macros.html" import writer_tag %}
+{% set t = r.totals %}
+{% macro money(v) %}{{ "n/a" if v is none else "${:,.0f}".format(v) }}{% endmacro %}
+<div class="fade-in">
+<div class="grid two">
+  <section class="card" id="numbers">
+    <div class="card-head"><h2>Numbers</h2><span class="tag code">Calculated by script, not by Claude</span></div>
+    <div class="kpis">
+      <div class="kpi"><div class="label">Premium written</div><div class="v">{{ r.metrics.total_premium }}</div><div class="s">{% if r.metrics.wow_direction %}{{ r.metrics.wow_direction|capitalize }} {{ r.metrics.wow_change_pct }} on last week{% else %}Target {{ r.metrics.target_total }}{% endif %}</div></div>
+      <div class="kpi"><div class="label">Policies</div><div class="v">{{ t.policies_written }}</div><div class="s">{{ t.new_policies }} new, {{ t.renewal_policies }} renewal</div></div>
+      <div class="kpi"><div class="label">Retention</div><div class="v">{{ r.metrics.retention_rate }}</div><div class="s">{{ t.renewals_kept }} of {{ t.renewals_due }} renewals kept</div></div>
+      <div class="kpi"><div class="label">Vs target</div><div class="v">{{ r.metrics.pct_of_target }}</div><div class="s">of {{ r.metrics.target_total }}</div></div>
+    </div>
+    <h3>By producer</h3>
+    <div class="table-wrap"><table>
+      <tr><th>Producer</th><th class="num">Policies</th><th class="num">Premium</th><th class="num">Target</th><th class="num">% of target</th><th class="num">Retention</th><th>Status</th></tr>
+      {% for p in r.by_producer %}
+      {% set k = p.producer|lower|replace(' ', '_') %}
+      <tr class="{{ 'below' if p.pct_of_target is not none and p.pct_of_target < 80 }}" id="row-{{ k }}">
+        <td>{{ p.producer }}</td><td class="num">{{ p.policies }}</td>
+        <td class="num">{{ r.metrics['producer.' ~ k ~ '.premium'] }}</td><td class="num">{{ r.metrics['producer.' ~ k ~ '.target'] }}</td>
+        <td class="num"><b>{{ r.metrics['producer.' ~ k ~ '.pct_of_target'] }}</b></td><td class="num">{{ r.metrics['producer.' ~ k ~ '.retention_rate'] }}</td>
+        <td>{% if p.pct_of_target is none %}<span class="pill muted">No target</span>{% elif p.pct_of_target < 80 %}<span class="pill red">Below target</span>{% elif p.pct_of_target >= 120 %}<span class="pill green">Well ahead</span>{% else %}<span class="pill ok">On track</span>{% endif %}</td>
+      </tr>
+      {% endfor %}
+    </table></div>
+    <h3>By line of business</h3>
+    <div class="table-wrap"><table>
+      <tr><th>Line</th><th class="num">Policies</th><th class="num">New</th><th class="num">Renewal</th><th class="num">Premium</th></tr>
+      {% for l in r.by_line %}<tr><td>{{ l.line }}</td><td class="num">{{ l.policies }}</td><td class="num">{{ l.new }}</td><td class="num">{{ l.renewal }}</td><td class="num">{{ r.metrics['line.' ~ (l.line|lower) ~ '.premium'] }}</td></tr>{% endfor %}
+    </table></div>
+  </section>
+
+  <section class="card" id="narrative">
+    <div class="card-head"><h2>Report</h2>{{ writer_tag(out.writer) }}</div>
+    <div id="report-text">
+      <p class="headline">{{ out.headline }}</p>
+      <div class="narr">{% for p in out.paragraphs %}<p>{{ p }}</p>{% endfor %}</div>
+    </div>
+    {% if out.problems %}<div class="problems"><b>Removed by the number check:</b>{% for p in out.problems %}<div>{{ p }}</div>{% endfor %}</div>{% endif %}
+    <h3>Flags</h3>
+    <div id="flags">
+    {% for f in r.flags %}<div class="flag {{ f.level }}" id="flag-{{ f.id }}"><b>{{ f.title }}</b><span>{{ f.detail }}</span></div>
+    {% else %}<p class="hint">No flags this week.</p>{% endfor %}
+    </div>
+    <div class="sources">
+      <div><b>Source:</b> {{ r.source.file }}, week ending {{ r.week_ending }}</div>
+      <div>{{ r.source.rows_used }} policy rows used, {{ r.source.rows_skipped }} skipped, {{ r.source.renewal_rows }} renewals checked{% if r.prior_week %}, compared with {{ r.prior_week.week }}{% endif %}</div>
+      <div>Every number in the report is filled in by code from the table on the left.</div>
+    </div>
+  </section>
+</div>
+<div class="approve-bar">
+  <span class="note">Draft for review. Nothing has been sent.</span>
+  <button class="btn approve" type="button" onclick="approve(this)">Approve report</button>
+  <button class="btn disabled" type="button" data-after-approve onclick="copyText(this, 'report-text')">Copy report text</button>
+</div>
+</div>

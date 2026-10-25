@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% from "macros.html" import icon %}
+{% block main %}
+<h1>Claude, set up for {{ agency }}</h1>
+<p class="lede">Four skills trained on the agency's own spreadsheet, quote checklist and FAQ. A script does every calculation and check, Claude writes the draft, and a person approves it. Nothing is ever sent from here.</p>
+<div class="grid tiles">
+  {% for s in skills %}
+  <a class="card tile" href="/skills/{{ s.slug }}"><div class="ico">{{ icon(s.icon) }}</div><h2>{{ s.name }}</h2><p>{{ s.blurb }}</p></a>
+  {% endfor %}
+  <a class="card tile alt" href="/evals"><div class="ico">{{ icon('check') }}</div><h2>Evals</h2><p>12 test cases that check the numbers, the quote fields and every FAQ citation.</p></a>
+  <a class="card tile alt" href="/connector"><div class="ico">{{ icon('db') }}</div><h2>Data connector</h2><p>Ask about production, customers or open quotes. Read-only, over the agency's own exports.</p></a>
+</div>
+{% endblock %}

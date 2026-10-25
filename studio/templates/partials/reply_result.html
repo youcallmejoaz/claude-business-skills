@@ -1,0 +1,29 @@
+{% from "macros.html" import writer_tag %}
+<div class="fade-in">
+<section class="card">
+  <div class="card-head"><h2>Draft reply</h2>{{ writer_tag(out.writer) }}</div>
+  <div class="reply" id="reply">
+    <p class="greet">{{ res.greeting }}</p>
+    <p>{% for s in res.sentences -%}
+      <span class="sent {{ s.type }}{{ ' replaced' if s.replaced }}"{% if s.replaced %} title="Replaced: {{ s.reason }}"{% endif %}>{{ s.text }}{% for i in s.faq_ids %} <button type="button" class="cite" data-id="{{ i }}">{{ i }}</button>{% endfor %}</span>{{ ' ' if not loop.last }}
+    {%- endfor %}</p>
+    <p class="sign">{{ res.sign_off }}</p>
+  </div>
+  <textarea id="reply-text" hidden>{{ res.reply_text }}</textarea>
+  {% if res.flags %}
+  <h3>For the team</h3>
+  {% for f in res.flags %}<div class="flag"><b>{{ 'Replaced an unsupported sentence' if 'needs an answer' not in f.reason else 'Needs an answer from the team' }}</b><span>"{{ f.sentence }}"{% if 'needs an answer' not in f.reason %} ({{ f.reason }}){% endif %}</span></div>{% endfor %}
+  {% endif %}
+</section>
+<section class="card" style="margin-top:20px">
+  <div class="card-head"><h2>Sources</h2><span class="tag code">Every fact checked against the FAQ</span></div>
+  {% for c in res.citations %}
+  <div class="faq-entry" id="src-{{ c.id }}"><div class="id">{{ c.id }}</div><div class="q">{{ c.question }}</div><div class="a">{{ c.answer }}</div></div>
+  {% else %}<p class="hint">No FAQ entries cited.</p>{% endfor %}
+</section>
+<div class="approve-bar">
+  <span class="note">Draft for review. Nothing has been sent.</span>
+  <button class="btn approve" type="button" onclick="approve(this)">Approve reply</button>
+  <button class="btn disabled" type="button" data-after-approve onclick="copyText(this, 'reply-text')">Copy reply</button>
+</div>
+</div>

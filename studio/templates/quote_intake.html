@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% from "macros.html" import steps %}
+{% set active = 'quote-intake' %}
+{% block title %}Quote intake &middot; Skills Studio{% endblock %}
+{% block main %}
+<h1>Quote intake</h1>
+<p class="lede">{{ skill.blurb }}</p>
+{{ steps("Paste the customer's email") }}
+<div class="grid input-result">
+  <form class="card" hx-post="/run/quote-intake" hx-target="#result" hx-indicator="#run-btn">
+    <div class="field"><label for="pick">Sample emails</label>
+      <select id="pick" onchange="loadSample('quote', this.value, 'email')">
+        <option value="">Choose a sample</option>
+        {% for s in samples %}<option value="{{ s }}">{{ s }}</option>{% endfor %}
+      </select></div>
+    <div class="field"><label for="email">Quote request email</label>
+      <textarea name="email" id="email" placeholder="Paste the email here, including any forwarded part"></textarea></div>
+    <button class="btn primary wide" id="run-btn" type="submit"><span class="spinner htmx-indicator"></span>Structure this request</button>
+  </form>
+  <div id="result"><div class="placeholder">The structured quote request and the list of missing information appear here.</div></div>
+</div>
+{% endblock %}

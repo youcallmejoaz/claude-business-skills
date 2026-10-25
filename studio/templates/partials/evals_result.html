@@ -1,0 +1,12 @@
+<div class="card fade-in" id="eval-results">
+  <div class="score"><span class="big {{ 'bad' if out.passed < out.total }}">{{ out.passed }} / {{ out.total }}</span>
+    <span style="font-size:20px;font-weight:600">passed &middot; {{ "%.0f"|format(out.pass_rate) }}%</span>
+    <span class="tag">{{ out.mode }} mode</span></div>
+  <div class="table-wrap"><table>
+    <tr><th>Case</th><th>Skill</th><th>What it checks</th><th>Result</th></tr>
+    {% for r in out.results %}
+    <tr><td><b>{{ r.id }}</b></td><td>{{ r.skill }}</td><td>{{ r.title }}{% for p in r.problems %}<div class="why">{{ p }}</div>{% endfor %}</td>
+      <td>{% if r.passed %}<span class="pill green">Pass</span>{% else %}<span class="pill red">Fail</span>{% endif %}</td></tr>
+    {% endfor %}
+  </table></div>
+</div>

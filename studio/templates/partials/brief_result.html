@@ -1,0 +1,27 @@
+{% from "macros.html" import writer_tag %}
+<div class="fade-in">
+<div class="grid two">
+  <section class="card">
+    <div class="card-head"><h2>One-page PDF</h2><span class="tag">{{ page_count }} page{{ 's' if page_count != 1 }}</span></div>
+    <div class="viewer" id="viewer">{% for img in pages %}<img src="{{ img }}" alt="Owner brief page {{ loop.index }}">{% endfor %}</div>
+  </section>
+  <section class="card">
+    <div class="card-head"><h2>Email draft</h2>{{ writer_tag(out.writer) }}</div>
+    <div class="email">
+      <div class="hdr"><div><b>To:</b> Producers (you choose when you send it)</div><div><b>Subject:</b> <span id="email-subject">{{ out.brief.email_subject }}</span></div></div>
+      <div class="body" id="email-body">{{ out.brief.email_body }}</div>
+    </div>
+    <h3>Headline and key points</h3>
+    <p class="headline" style="font-size:19px">{{ out.brief.headline }}</p>
+    <ul>{% for b in out.brief.bullets %}<li>{{ b }}</li>{% endfor %}</ul>
+    {% if out.problems %}<div class="problems"><b>Removed by the number check:</b>{% for p in out.problems %}<div>{{ p }}</div>{% endfor %}</div>{% endif %}
+    <div class="sources"><div><b>Source:</b> {{ r.source.file }}. Numbers in the PDF and the email come from the production report script.</div></div>
+  </section>
+</div>
+<div class="approve-bar">
+  <span class="note">Draft for review. Nothing has been sent.</span>
+  <button class="btn approve" type="button" onclick="approve(this)">Approve brief</button>
+  <a class="btn disabled" data-after-approve href="/export/brief/{{ token }}">Download PDF</a>
+  <button class="btn disabled" type="button" data-after-approve onclick="copyText(this, 'email-body')">Copy email</button>
+</div>
+</div>

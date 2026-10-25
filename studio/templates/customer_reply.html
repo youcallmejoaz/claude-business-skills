@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% from "macros.html" import steps %}
+{% set active = 'customer-reply' %}
+{% block title %}Customer reply &middot; Skills Studio{% endblock %}
+{% block main %}
+<h1>Customer reply</h1>
+<p class="lede">{{ skill.blurb }}</p>
+{{ steps("Paste the customer's email") }}
+<div class="grid input-result">
+  <form class="card" hx-post="/run/customer-reply" hx-target="#result" hx-indicator="#run-btn">
+    <div class="field"><label for="pick">Sample messages</label>
+      <select id="pick" onchange="loadSample('message', this.value, 'message')">
+        <option value="">Choose a sample</option>
+        {% for s in samples %}<option value="{{ s }}">{{ s }}</option>{% endfor %}
+      </select></div>
+    <div class="field"><label for="message">Customer email</label>
+      <textarea name="message" id="message" placeholder="Paste the customer's email here" style="min-height:260px"></textarea></div>
+    <button class="btn primary wide" id="run-btn" type="submit"><span class="spinner htmx-indicator"></span>Draft a reply</button>
+  </form>
+  <div id="result"><div class="placeholder">The draft reply appears here, with the FAQ entry behind every fact.</div></div>
+</div>
+{% endblock %}

@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% block title %}Skills Studio{% endblock %}</title>
+<link rel="stylesheet" href="/static/app.css">
+<script src="/static/htmx.min.js"></script>
+<script src="/static/app.js" defer></script>
+</head>
+<body>
+<header class="topbar"><div class="inner">
+  <a class="brand" href="/"><span class="mark">S</span><span>Skills Studio<small>{{ agency }} &middot; sample data</small></span></a>
+  <nav class="main">
+    {% for s in skills %}<a href="/skills/{{ s.slug }}" class="{{ 'on' if active == s.slug }}">{{ s.name }}</a>{% endfor %}
+    <a href="/evals" class="{{ 'on' if active == 'evals' }}">Evals</a>
+    <a href="/connector" class="{{ 'on' if active == 'connector' }}">Data connector</a>
+  </nav>
+  {% if demo %}<span class="mode demo">Demo mode &middot; nothing leaves this computer</span>
+  {% else %}<span class="mode real">Real mode &middot; Claude API</span>{% endif %}
+</div></header>
+<main>{% block main %}{% endblock %}</main>
+</body>
+</html>

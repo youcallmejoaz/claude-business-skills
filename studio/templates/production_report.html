@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% from "macros.html" import steps %}
+{% set active = 'production-report' %}
+{% block title %}Production report &middot; Skills Studio{% endblock %}
+{% block main %}
+<h1>Weekly production report</h1>
+<p class="lede">{{ skill.blurb }}</p>
+{{ steps("Add this week's spreadsheet") }}
+<form class="card" id="run-form" hx-post="/run/production-report" hx-target="#result" hx-encoding="multipart/form-data" hx-indicator="#run-btn">
+  <div class="grid two">
+    <label class="drop" id="drop">
+      <input type="file" name="file" accept=".xlsx">
+      <div class="big">Drop this week's production spreadsheet here</div>
+      <div class="small">or click to choose an Excel file</div>
+      <div class="chosen"></div>
+    </label>
+    <div>
+      <div class="field"><label for="sample">Or use a sample week</label>
+        <select name="sample" id="sample">
+          <option value="">Choose a week</option>
+          {% for w in weeks %}<option value="{{ w.file }}">{{ w.label }}</option>{% endfor %}
+        </select></div>
+      <button class="btn primary wide" id="run-btn" type="submit"><span class="spinner htmx-indicator"></span>Run production report</button>
+    </div>
+  </div>
+</form>
+<div id="result" style="margin-top:20px"><div class="placeholder">The report appears here: numbers on the left, Claude's explanation on the right.</div></div>
+{% endblock %}

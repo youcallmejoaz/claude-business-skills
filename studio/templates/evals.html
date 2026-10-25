@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% set active = 'evals' %}
+{% block title %}Evals &middot; Skills Studio{% endblock %}
+{% block main %}
+<h1>Evals</h1>
+<p class="lede">Twelve test cases run every skill the same way the app does. They check that every number matches totals calculated separately, that required quote fields are present or listed as missing, and that every fact in a customer reply cites a real FAQ entry.</p>
+<form hx-post="/evals/run" hx-target="#result" hx-indicator="#run-btn" style="margin-bottom:20px">
+  <button class="btn primary" id="run-btn" type="submit"><span class="spinner htmx-indicator"></span>Run all 12 evals</button>
+</form>
+<div id="result"><div class="placeholder">Results appear here.</div></div>
+{% endblock %}

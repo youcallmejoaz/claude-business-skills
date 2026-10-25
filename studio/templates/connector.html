@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% set active = 'connector' %}
+{% block title %}Data connector &middot; Skills Studio{% endblock %}
+{% block main %}
+<h1>Agency data connector</h1>
+<p class="lede">Four read-only tools over the agency's production, customer and quote exports. Claude Desktop and Claude Code use the same tools over MCP. Nothing here can change or send data.</p>
+<div class="card">
+  <form class="ask" hx-post="/connector/ask" hx-target="#result" hx-indicator="#ask-btn">
+    <input type="text" name="question" id="question" placeholder="Ask about production, customers or open quotes" autocomplete="off">
+    <button class="btn primary" id="ask-btn" type="submit"><span class="spinner htmx-indicator"></span>Ask</button>
+  </form>
+  <div class="chips">{% for e in examples %}<button class="chip" type="button" onclick="ask(this.textContent)">{{ e }}</button>{% endfor %}</div>
+</div>
+<div id="result" style="margin-top:20px"></div>
+{% endblock %}

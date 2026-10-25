@@ -1,0 +1,18 @@
+<div class="fade-in">
+<section class="card">
+  <div class="card-head"><h2>Tool call</h2><span class="tag ro">Read-only</span></div>
+  <div class="call"><span class="fn">{{ out.tool }}</span>({{ out.args|tojson }})</div>
+  <p class="hint">{{ out.chooser }}</p>
+</section>
+<section class="card" style="margin-top:20px">
+  <div class="card-head"><h2>Result</h2>
+    <span class="tag">{% for k, v in out.summary.items() %}{{ k|replace('_', ' ') }}: {{ v }}{{ ' · ' if not loop.last }}{% endfor %}</span></div>
+  {% if out.extra %}<p><b>{{ out.extra.producer }}</b>: {{ out.extra.policies }} policies, {{ "${:,.0f}".format(out.extra.premium) }} written, {{ out.extra.pct_of_target }}% of target.</p>{% endif %}
+  {% if out.rows %}
+  <div class="table-wrap"><table id="tool-table">
+    <tr>{% for c in out.columns %}<th>{{ c|replace('_', ' ') }}</th>{% endfor %}</tr>
+    {% for row in out.rows %}<tr>{% for c in out.columns %}<td>{{ row[c] }}</td>{% endfor %}</tr>{% endfor %}
+  </table></div>
+  {% else %}<p>No rows matched.</p>{% endif %}
+</section>
+</div>
