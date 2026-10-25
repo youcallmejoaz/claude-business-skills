@@ -1,0 +1,37 @@
+{
+  "key": "fbb129f9a6f86293",
+  "input": "data/quote_emails/q02_auto_two_drivers.txt",
+  "response": {
+    "fields": {
+      "customer_name": {
+        "value": "James Whitfield",
+        "source": "From: James Whitfield"
+      },
+      "contact": {
+        "value": "555-555-0123",
+        "source": "555-555-0123"
+      },
+      "line_of_business": {
+        "value": "Auto",
+        "source": "I'd like a quote for auto insurance for my wife and me"
+      },
+      "effective_date": {
+        "value": "December 1",
+        "source": "Our current policy renews on December 1 and we'd like the new one to start then"
+      },
+      "zip_code": {
+        "value": "30801",
+        "source": "We live in Fernhill, ZIP 30801"
+      },
+      "drivers": {
+        "value": "James Whitfield, born 07/22/1979; Anna Whitfield, born 11/02/1981",
+        "source": "- James Whitfield, born 07/22/1979 - Anna Whitfield, born 11/02/1981"
+      },
+      "vehicles": {
+        "value": "2021 Toyota Camry; 2016 Ford F-150",
+        "source": "a 2021 Toyota Camry and a 2016 Ford F-150"
+      }
+    },
+    "notes": ""
+  }
+}

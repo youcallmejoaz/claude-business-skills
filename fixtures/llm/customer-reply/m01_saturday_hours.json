@@ -1,0 +1,37 @@
+{
+  "key": "21c5c427f009220c",
+  "input": "data/customer_messages/m01_saturday_hours.txt",
+  "response": {
+    "greeting": "Hi Maria,",
+    "sentences": [
+      {
+        "text": "Thanks for getting in touch.",
+        "type": "courtesy",
+        "faq_ids": []
+      },
+      {
+        "text": "Yes, we are open on Saturday from 9:00 am to 12:00 pm.",
+        "type": "fact",
+        "faq_ids": [
+          "FAQ-01"
+        ]
+      },
+      {
+        "text": "You are welcome to drop off a check at our office at 214 Market Street, Fernhill.",
+        "type": "fact",
+        "faq_ids": [
+          "FAQ-02",
+          "FAQ-08"
+        ]
+      },
+      {
+        "text": "We can't accept cash at the office, but you can also pay by bank transfer, debit card or credit card.",
+        "type": "fact",
+        "faq_ids": [
+          "FAQ-08"
+        ]
+      }
+    ],
+    "sign_off": "Best regards,\nFernhill Insurance Agency"
+  }
+}

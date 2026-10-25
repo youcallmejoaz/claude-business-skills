@@ -1,0 +1,41 @@
+{
+  "key": "06f5ee57f1e14123",
+  "input": "data/quote_emails/q25_forwarded_from_colleague.txt",
+  "response": {
+    "fields": {
+      "customer_name": {
+        "value": "Hugo Calloway",
+        "source": "Name: Hugo Calloway"
+      },
+      "contact": {
+        "value": "(555) 555-0191",
+        "source": "Phone: (555) 555-0191"
+      },
+      "line_of_business": {
+        "value": "Auto",
+        "source": "Interested in: Auto"
+      },
+      "effective_date": {
+        "value": "ASAP",
+        "source": "Want to switch from current carrier ASAP"
+      },
+      "zip_code": {
+        "value": "30803",
+        "source": "ZIP 30803"
+      },
+      "drivers": {
+        "value": "Hugo Calloway, sole driver, DOB 3/3/1999",
+        "source": "sole driver, DOB 3/3/1999"
+      },
+      "vehicles": {
+        "value": "2021 Volkswagen Jetta",
+        "source": "2021 Volkswagen Jetta"
+      },
+      "current_premium": {
+        "value": "$1,640/yr",
+        "source": "paying $1,640/yr"
+      }
+    },
+    "notes": "Came in through the website form, forwarded by the front desk."
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "key": "e2266b08400a8824",
+  "input": "data/quote_emails/q13_commercial_vague.txt",
+  "response": {
+    "fields": {
+      "customer_name": {
+        "value": "Caleb Tanaka",
+        "source": "From: Caleb Tanaka"
+      },
+      "contact": {
+        "value": "caleb.tanaka@example.com",
+        "source": "caleb.tanaka@example.com"
+      },
+      "line_of_business": {
+        "value": "Commercial",
+        "source": "I'm starting a landscaping business and need insurance"
+      },
+      "business_type": {
+        "value": "Landscaping (new business)",
+        "source": "I'm starting a landscaping business"
+      }
+    },
+    "notes": "Asked what we need; reply with the commercial checklist questions."
+  }
+}

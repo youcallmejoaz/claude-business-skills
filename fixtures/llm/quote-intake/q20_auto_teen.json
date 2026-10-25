@@ -1,0 +1,37 @@
+{
+  "key": "68f8186edce96048",
+  "input": "data/quote_emails/q20_auto_teen.txt",
+  "response": {
+    "fields": {
+      "customer_name": {
+        "value": "Ivy Varga",
+        "source": "Me: Ivy Varga born 02/02/1980"
+      },
+      "contact": {
+        "value": "ivy.varga@example.com",
+        "source": "Ivy, ivy.varga@example.com"
+      },
+      "line_of_business": {
+        "value": "Auto",
+        "source": "Subject: adding teen driver quote"
+      },
+      "effective_date": {
+        "value": "Nov 15",
+        "source": "Please start the change Nov 15"
+      },
+      "zip_code": {
+        "value": "30801",
+        "source": "Zip 30801"
+      },
+      "drivers": {
+        "value": "Ivy Varga, born 02/02/1980; daughter Mila (date of birth not given)",
+        "source": "Me: Ivy Varga born 02/02/1980"
+      },
+      "vehicles": {
+        "value": "2019 Nissan Rogue; 2014 Honda Accord",
+        "source": "Our cars: 2019 Nissan Rogue and 2014 Honda Accord"
+      }
+    },
+    "notes": "Teen driver Mila: ask for her date of birth and license date."
+  }
+}

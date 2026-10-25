@@ -22,7 +22,7 @@ A customer asks a question by email and the team wants a reply drafted from the 
    ```
    - `fact`: anything about the agency, prices, coverage, times, steps. Must cite the FAQ ids it comes from and say no more than they say.
    - `courtesy`: thanks or greetings only, no facts.
-   - `confirm`: for every question the FAQ does not answer. Never guess.
+   - `confirm`: for every question the FAQ does not answer. Start with "I'll confirm" and only promise to check; no facts. Never guess.
 3. Check it:
    ```
    python scripts/check_reply.py draft.json

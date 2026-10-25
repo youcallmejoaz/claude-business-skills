@@ -1,0 +1,21 @@
+{
+  "key": "527121a46682389c",
+  "input": "data/quote_emails/q03_home_vague.txt",
+  "response": {
+    "fields": {
+      "customer_name": {
+        "value": "Elena Novak",
+        "source": "From: Elena Novak"
+      },
+      "contact": {
+        "value": "elena.novak@example.com",
+        "source": "elena.novak@example.com"
+      },
+      "line_of_business": {
+        "value": "Home",
+        "source": "how much would home insurance be for a 3 bedroom house?"
+      }
+    },
+    "notes": "3 bedroom house in Linden Bay. Linden Bay is ZIP 30803 in our service area, but the customer did not give a ZIP or address."
+  }
+}

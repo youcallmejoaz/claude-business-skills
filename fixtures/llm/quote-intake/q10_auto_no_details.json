@@ -1,0 +1,21 @@
+{
+  "key": "9bc731186a97b428",
+  "input": "data/quote_emails/q10_auto_no_details.txt",
+  "response": {
+    "fields": {
+      "customer_name": {
+        "value": "Sofia Marsh",
+        "source": "Sofia Marsh"
+      },
+      "contact": {
+        "value": "sofia.marsh@example.com",
+        "source": "sofia.marsh@example.com"
+      },
+      "line_of_business": {
+        "value": "Auto",
+        "source": "car insurance"
+      }
+    },
+    "notes": "Existing rates went up; wants a cheaper option. Almost nothing else given."
+  }
+}

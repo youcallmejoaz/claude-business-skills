@@ -1,0 +1,49 @@
+{
+  "key": "fbcbb9e6102f0191",
+  "input": "data/quote_emails/q24_life_and_auto.txt",
+  "response": {
+    "fields": {
+      "customer_name": {
+        "value": "Victor Nakamura",
+        "source": "Victor Nakamura"
+      },
+      "contact": {
+        "value": "555-555-0181",
+        "source": "Phone 555-555-0181"
+      },
+      "line_of_business": {
+        "value": "Life (term) and Auto",
+        "source": "I'd like a quote on term life ($300,000, non-smoker, born 06/21/1977) and also auto"
+      },
+      "effective_date": {
+        "value": "November 1",
+        "source": "Start both on November 1"
+      },
+      "zip_code": {
+        "value": "30806",
+        "source": "ZIP 30806"
+      },
+      "drivers": {
+        "value": "Victor Nakamura, only driver, born 06/21/1977",
+        "source": "born 06/21/1977) and also auto for my 2020 Tesla Model 3, just me driving"
+      },
+      "vehicles": {
+        "value": "2020 Tesla Model 3",
+        "source": "my 2020 Tesla Model 3"
+      },
+      "date_of_birth": {
+        "value": "06/21/1977",
+        "source": "born 06/21/1977"
+      },
+      "coverage_amount": {
+        "value": "$300,000",
+        "source": "term life ($300,000"
+      },
+      "tobacco_use": {
+        "value": "No (non-smoker)",
+        "source": "non-smoker"
+      }
+    },
+    "notes": ""
+  }
+}

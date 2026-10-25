@@ -1,0 +1,11 @@
+{
+  "key": "2026-W41",
+  "total_premium": 66550.97,
+  "response": {
+    "headline": "A softer week: {{pct_of_target}} of target and retention at {{retention_rate}}",
+    "paragraphs": [
+      "The agency wrote {{total_premium}} across {{policies_written}} policies, roughly level with last week. Of {{renewals_due}} renewals due, {{renewals_lost}} were lost, which takes retention under the agency's line.",
+      "Aisha Bello and Grant Fowler each lost renewals, so a quick look at those policies would show whether price or service is the reason. Tom Becker led the team at {{producer.tom_becker.pct_of_target}} of target, while Grant Fowler finished at {{producer.grant_fowler.pct_of_target}}."
+    ]
+  }
+}

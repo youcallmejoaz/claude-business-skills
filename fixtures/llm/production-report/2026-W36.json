@@ -1,0 +1,11 @@
+{
+  "key": "2026-W36",
+  "total_premium": 74438.54,
+  "response": {
+    "headline": "On target at {{pct_of_target}}, but retention is below the line at {{retention_rate}}",
+    "paragraphs": [
+      "The agency wrote {{policies_written}} policies worth {{total_premium}}, just over the combined target of {{target_total}}. Home led by count with {{line.home.policies}} policies. Of {{renewals_due}} renewals due, {{renewals_lost}} were lost, which takes retention under the agency's line.",
+      "Priya Raman carried the week at {{producer.priya_raman.pct_of_target}} of target. Tom Becker did not keep all of his renewals, so it is worth asking what happened with the one that left. Grant Fowler finished at {{producer.grant_fowler.pct_of_target}} of target with {{producer.grant_fowler.premium}} written. The file does not show why, so a short check-in on his pipeline is the next step."
+    ]
+  }
+}

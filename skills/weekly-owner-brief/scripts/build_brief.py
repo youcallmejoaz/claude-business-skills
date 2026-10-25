@@ -54,12 +54,7 @@ def fill_brief(brief: dict, metrics: dict) -> tuple[dict, list[str]]:
     return out, problems
 
 
-def _money(v):
-    return "n/a" if v is None else f"${v:,.0f}"
-
-
-def _pct(v):
-    return "n/a" if v is None else f"{v:.0f}%"
+from compute_report import money as _money, pct as _pct  # noqa: E402  (same rounding as the report)
 
 
 def _status(p: dict) -> tuple[str, str]:
@@ -117,7 +112,8 @@ def render_html(report: dict, brief: dict, agency: str = AGENCY) -> str:
         week_text = report["week"]
     wow = ""
     if t.get("wow_change_pct") is not None:
-        wow = f"{t['wow_change_pct']:+.0f}% vs last week"
+        c = t["wow_change_pct"]
+        wow = f"{'Up' if c > 0 else 'Down'} {_pct(abs(c))} on last week" if _pct(abs(c)) != "0%" else "Level with last week"
     kpis = [
         ("Premium written", _money(t["total_premium"]), wow or f"Target {_money(t['target_total'])}"),
         ("Policies written", str(t["policies_written"]), f"{t['new_policies']} new, {t['renewal_policies']} renewal"),

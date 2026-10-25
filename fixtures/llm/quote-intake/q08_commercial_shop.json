@@ -1,0 +1,49 @@
+{
+  "key": "91326a3e8c408506",
+  "input": "data/quote_emails/q08_commercial_shop.txt",
+  "response": {
+    "fields": {
+      "customer_name": {
+        "value": "Grace Pryor",
+        "source": "Grace Pryor"
+      },
+      "contact": {
+        "value": "(555) 555-0109",
+        "source": "(555) 555-0109"
+      },
+      "line_of_business": {
+        "value": "Commercial: general liability and commercial property",
+        "source": "We'd also like to look at commercial property for the shop's tools and stock"
+      },
+      "effective_date": {
+        "value": "02/01/2027 (when current policy ends)",
+        "source": "it renews on 02/01/2027"
+      },
+      "zip_code": {
+        "value": "30804",
+        "source": "Ashford Hollow (30804)"
+      },
+      "business_type": {
+        "value": "Bike repair shop (Pryor Bike Repair)",
+        "source": "I run Pryor Bike Repair"
+      },
+      "annual_revenue": {
+        "value": "$310,000 last year",
+        "source": "revenue last year was $310,000"
+      },
+      "employee_count": {
+        "value": "3 including owner",
+        "source": "3 employees including me"
+      },
+      "years_in_business": {
+        "value": "9 years",
+        "source": "We've been open 9 years"
+      },
+      "current_premium": {
+        "value": "$2,450 a year (general liability)",
+        "source": "at $2,450 a year"
+      }
+    },
+    "notes": ""
+  }
+}

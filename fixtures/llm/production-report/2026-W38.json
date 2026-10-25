@@ -1,0 +1,11 @@
+{
+  "key": "2026-W38",
+  "total_premium": 76467.69,
+  "response": {
+    "headline": "Every renewal kept and {{total_premium}} written, {{pct_of_target}} of target",
+    "paragraphs": [
+      "The agency kept all {{renewals_due}} renewals that came due and wrote {{policies_written}} policies, {{new_policies}} new and {{renewal_policies}} renewals. Premium was {{wow_direction}} {{wow_change_pct}} on last week.",
+      "Luis Ortega and Priya Raman both finished well ahead, at {{producer.luis_ortega.pct_of_target}} and {{producer.priya_raman.pct_of_target}} of target. Grant Fowler is the furthest behind at {{producer.grant_fowler.pct_of_target}}, his third week in a row below the line, so a conversation about his pipeline is due."
+    ]
+  }
+}

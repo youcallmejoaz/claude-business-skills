@@ -1,0 +1,17 @@
+From: Nathan Lindqvist <nathan.lindqvist@example.com>
+Subject: Homeowners quote request
+
+Hello,
+
+Please quote homeowners insurance for:
+Address: 52 Birch Court, Fernhill 30801
+Built: 2008
+Size: 1,850 square feet
+Roof: replaced in 2019
+Construction: brick
+
+We'd want coverage starting October 30. No claims in the last 5 years.
+
+Thank you,
+Nathan Lindqvist
+nathan.lindqvist@example.com

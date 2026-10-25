@@ -23,6 +23,7 @@ import json
 import re
 import sys
 from collections import Counter
+from decimal import ROUND_HALF_UP, Decimal
 from pathlib import Path
 
 import pandas as pd
@@ -259,12 +260,17 @@ def compute(path: str | Path, previous: str | Path | None = None) -> dict:
     return report
 
 
+def _whole(v: float) -> int:
+    """Round half up (114.5 -> 115), the way people round by hand, not banker's rounding."""
+    return int(Decimal(str(v)).quantize(Decimal("1"), rounding=ROUND_HALF_UP))
+
+
 def money(v: float | None) -> str:
-    return "n/a" if v is None else f"${v:,.0f}"
+    return "n/a" if v is None else f"${_whole(v):,}"
 
 
 def pct(v: float | None) -> str:
-    return "n/a" if v is None else f"{v:.0f}%"
+    return "n/a" if v is None else f"{_whole(v)}%"
 
 
 def build_flags(report: dict) -> list[dict]:

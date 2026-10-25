@@ -1,0 +1,11 @@
+{
+  "key": "2026-W37",
+  "total_premium": 74307.44,
+  "response": {
+    "headline": "Right on target at {{pct_of_target}}, with {{total_premium}} written",
+    "paragraphs": [
+      "Premium was about the same as last week at {{total_premium}} across {{policies_written}} policies, and auto was busy with {{line.auto.policies}} policies written. Retention was healthy at {{retention_rate}}.",
+      "Priya Raman was well ahead at {{producer.priya_raman.pct_of_target}} of target. Grant Fowler is at {{producer.grant_fowler.pct_of_target}} and kept {{producer.grant_fowler.retention_rate}} of his renewals, which is the main thing to look at this week."
+    ]
+  }
+}

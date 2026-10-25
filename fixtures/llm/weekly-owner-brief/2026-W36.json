@@ -1,0 +1,19 @@
+{
+  "key": "2026-W36",
+  "total_premium": 74438.54,
+  "response": {
+    "headline": "On target at {{pct_of_target}}, but retention is below the line at {{retention_rate}}",
+    "bullets": [
+      "The agency wrote {{policies_written}} policies worth {{total_premium}}, {{pct_of_target}} of the combined target, with retention at {{retention_rate}}.",
+      "Priya Raman stood out at {{producer.priya_raman.pct_of_target}} of target.",
+      "Grant Fowler is at {{producer.grant_fowler.pct_of_target}} of target and needs support."
+    ],
+    "actions": [
+      "Book a check-in with Grant Fowler this week to go through his pipeline and open quotes.",
+      "Ask the producers who lost renewals to note the reason for each one before Friday.",
+      "Thank Priya in the team meeting and ask what worked."
+    ],
+    "email_subject": "Weekly production: week ending {{week_ending}}",
+    "email_body": "Hi team,\n\nThis week we wrote {{total_premium}} across {{policies_written}} policies, which is {{pct_of_target}} of our combined target. Retention came in at {{retention_rate}}. A special thanks to Priya for a standout week. If you have renewals coming up next week, please flag any that look at risk so we can help early. Thanks for the work that went into this.\n\nBest regards,\nFernhill Insurance Agency"
+  }
+}

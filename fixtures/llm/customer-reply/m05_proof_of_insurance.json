@@ -1,0 +1,29 @@
+{
+  "key": "156f44526a432cb5",
+  "input": "data/customer_messages/m05_proof_of_insurance.txt",
+  "response": {
+    "greeting": "Hi Isaac,",
+    "sentences": [
+      {
+        "text": "Thanks for the heads up on your closing date.",
+        "type": "courtesy",
+        "faq_ids": []
+      },
+      {
+        "text": "We email proof of insurance within one business day of your request.",
+        "type": "fact",
+        "faq_ids": [
+          "FAQ-13"
+        ]
+      },
+      {
+        "text": "If the lender needs a certificate of insurance, send us the certificate holder's name and address.",
+        "type": "fact",
+        "faq_ids": [
+          "FAQ-22"
+        ]
+      }
+    ],
+    "sign_off": "Best regards,\nFernhill Insurance Agency"
+  }
+}

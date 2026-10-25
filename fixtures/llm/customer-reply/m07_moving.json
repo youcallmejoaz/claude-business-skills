@@ -1,0 +1,29 @@
+{
+  "key": "ff59a1aa383e09c2",
+  "input": "data/customer_messages/m07_moving.txt",
+  "response": {
+    "greeting": "Hi Owen,",
+    "sentences": [
+      {
+        "text": "Thanks for letting us know about your move.",
+        "type": "courtesy",
+        "faq_ids": []
+      },
+      {
+        "text": "Please tell us your new address before your move date.",
+        "type": "fact",
+        "faq_ids": [
+          "FAQ-19"
+        ]
+      },
+      {
+        "text": "Your home and auto policies may need updating, and your premium may change at the new address.",
+        "type": "fact",
+        "faq_ids": [
+          "FAQ-19"
+        ]
+      }
+    ],
+    "sign_off": "Best regards,\nFernhill Insurance Agency"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "key": "6712d5b6c63f7c3f",
+  "input": "data/quote_emails/q04_auto_new_car.txt",
+  "response": {
+    "fields": {
+      "customer_name": {
+        "value": "Marcus Okafor",
+        "source": "From: Marcus Okafor"
+      },
+      "contact": {
+        "value": "(555) 555-0131",
+        "source": "(555) 555-0131"
+      },
+      "line_of_business": {
+        "value": "Auto",
+        "source": "need insurance on it before I drive it off the lot"
+      },
+      "effective_date": {
+        "value": "this Saturday (before pick-up)",
+        "source": "Picking up a 2024 Subaru Outback this Saturday, need insurance on it before I drive it off the lot"
+      },
+      "zip_code": {
+        "value": "30805",
+        "source": "Zip is 30805"
+      },
+      "drivers": {
+        "value": "Marcus Okafor, only driver, age 34",
+        "source": "Just me driving. I'm 34"
+      },
+      "vehicles": {
+        "value": "2024 Subaru Outback",
+        "source": "Picking up a 2024 Subaru Outback"
+      }
+    },
+    "notes": "Customer gave an age, not a date of birth. Urgent: needs cover before Saturday."
+  }
+}

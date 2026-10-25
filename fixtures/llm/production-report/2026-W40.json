@@ -1,0 +1,11 @@
+{
+  "key": "2026-W40",
+  "total_premium": 67512.9,
+  "response": {
+    "headline": "{{total_premium}} written, {{pct_of_target}} of target, and one row skipped in the file",
+    "paragraphs": [
+      "Premium was {{wow_direction}} {{wow_change_pct}} on last week, with {{policies_written}} policies written and retention at {{retention_rate}}. Maya Chen and Priya Raman were the only producers at or above target.",
+      "Grant Fowler is at {{producer.grant_fowler.pct_of_target}} of target and did not keep all of his renewals. One row in the export had no premium and was skipped; it should be fixed at the source so the numbers are complete."
+    ]
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "key": "c8735ff36bbee991",
+  "input": "data/quote_emails/q18_life_no_dob.txt",
+  "response": {
+    "fields": {
+      "customer_name": {
+        "value": "Clara Sorensen",
+        "source": "Clara Sorensen, 555-555-0105"
+      },
+      "contact": {
+        "value": "555-555-0105",
+        "source": "Clara Sorensen, 555-555-0105"
+      },
+      "line_of_business": {
+        "value": "Life",
+        "source": "want to get life insurance"
+      },
+      "coverage_amount": {
+        "value": "something like $1 million",
+        "source": "Something like $1 million?"
+      },
+      "tobacco_use": {
+        "value": "No",
+        "source": "I don't smoke"
+      }
+    },
+    "notes": "New parent. Larger coverage amounts may need a medical exam."
+  }
+}

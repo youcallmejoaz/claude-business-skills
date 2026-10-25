@@ -1,0 +1,45 @@
+{
+  "key": "c0b431882c5cf5ec",
+  "input": "data/quote_emails/q17_commercial_auto.txt",
+  "response": {
+    "fields": {
+      "customer_name": {
+        "value": "Felix Mbeki",
+        "source": "Felix Mbeki, 555-555-0162"
+      },
+      "contact": {
+        "value": "555-555-0162",
+        "source": "Felix Mbeki, 555-555-0162"
+      },
+      "line_of_business": {
+        "value": "Commercial: commercial auto and general liability",
+        "source": "We need commercial auto for 2 work vans (2020 Ford Transit, 2023 Ram ProMaster) plus general liability"
+      },
+      "zip_code": {
+        "value": "30806",
+        "source": "Based in Stonebridge 30806"
+      },
+      "vehicles": {
+        "value": "2020 Ford Transit; 2023 Ram ProMaster",
+        "source": "2020 Ford Transit, 2023 Ram ProMaster"
+      },
+      "business_type": {
+        "value": "Plumbing (Mbeki Plumbing)",
+        "source": "van insurance for my plumbing company"
+      },
+      "annual_revenue": {
+        "value": "about $780,000",
+        "source": "about $780,000 revenue"
+      },
+      "employee_count": {
+        "value": "5",
+        "source": "5 employees"
+      },
+      "years_in_business": {
+        "value": "14 years",
+        "source": "14 years in business"
+      }
+    },
+    "notes": "Commercial auto: ask who drives the vans."
+  }
+}

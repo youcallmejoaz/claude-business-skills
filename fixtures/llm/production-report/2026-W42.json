@@ -1,0 +1,11 @@
+{
+  "key": "2026-W42",
+  "total_premium": 71230.54,
+  "response": {
+    "headline": "Premium {{wow_direction}} {{wow_change_pct}} to {{total_premium}}, but retention slipped to {{retention_rate}}",
+    "paragraphs": [
+      "The agency wrote {{policies_written}} policies, with auto the busiest line at {{line.auto.policies}}. Of {{renewals_due}} renewals due, {{renewals_lost}} were lost.",
+      "Maya Chen lost half of her renewals due this week, which is worth reviewing with her before the next renewals come up. Priya Raman led at {{producer.priya_raman.pct_of_target}} of target, and Grant Fowler finished at {{producer.grant_fowler.pct_of_target}}."
+    ]
+  }
+}

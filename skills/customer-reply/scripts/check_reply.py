@@ -37,7 +37,8 @@ we were what when where which while who whom why will with would you your yours 
 please thanks thank hi hello dear regards best let know get like need want just also sure""".split())
 POLICY_WORDS = {"cover", "covers", "covered", "coverage", "premium", "price", "cost", "costs", "discount", "deductible",
                 "refund", "claim", "claims", "rate", "rates", "days", "hours", "open", "closed", "carrier",
-                "carriers", "pay", "payment", "fee", "free", "guarantee", "guaranteed", "cheaper", "approved"}
+                "carriers", "pay", "payment", "fee", "free", "guarantee", "guaranteed", "cheaper", "approved",
+                "policy", "service", "available", "included", "office"}
 
 
 def parse_faq(path: Path = FAQ_FILE) -> dict:
@@ -97,10 +98,12 @@ def check_sentence(s: dict, faq: dict) -> str | None:
     kind = s.get("type", "fact")
     ids = s.get("faq_ids") or []
     if kind == "confirm":
-        if "confirm" not in text.lower():
-            return "confirm sentence does not say we will confirm"
-        if numbers(text):
-            return "confirm sentence contains a number"
+        # One clause that only promises to check: "I'll confirm <topic> with the team ...".
+        # Anything more could slip in an uncited fact.
+        if not re.match(r"^(i'll|i will) confirm\b", text.lower().replace("\u2019", "'")):
+            return "confirm sentence must start with \"I'll confirm\""
+        if numbers(text) or ";" in text or " but " in text.lower():
+            return "confirm sentence adds more than a promise to check"
         return None
     if kind == "courtesy" and not ids:
         if numbers(text) or (words(text) & POLICY_WORDS):

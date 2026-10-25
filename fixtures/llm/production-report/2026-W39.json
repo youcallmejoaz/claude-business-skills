@@ -1,0 +1,11 @@
+{
+  "key": "2026-W39",
+  "total_premium": 69803.76,
+  "response": {
+    "headline": "Below target at {{pct_of_target}}, with premium {{wow_direction}} {{wow_change_pct}}",
+    "paragraphs": [
+      "The agency wrote {{total_premium}} across {{policies_written}} policies, short of the combined target of {{target_total}}. Life was the busiest line by count with {{line.life.policies}} policies, and retention held at {{retention_rate}}.",
+      "No producer was well ahead this week, and several finished just under their number. Luis Ortega did not keep all of his renewals, and Grant Fowler is at {{producer.grant_fowler.pct_of_target}} of target. The file does not show the reasons, so both are worth a quick check-in."
+    ]
+  }
+}

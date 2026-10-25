@@ -1,59 +1,59 @@
 {
   "week": "2026-W37",
-  "total_premium": 72145.04,
-  "policies_written": 31,
-  "new_policies": 11,
-  "renewal_policies": 20,
-  "retention_rate": 90.9,
-  "pct_of_target": 97.5,
+  "total_premium": 74307.44,
+  "policies_written": 34,
+  "new_policies": 17,
+  "renewal_policies": 17,
+  "retention_rate": 89.5,
+  "pct_of_target": 100.4,
   "by_line": {
     "Auto": {
-      "policies": 12,
-      "premium": 20416.2
+      "policies": 19,
+      "premium": 28819.29
     },
     "Home": {
-      "policies": 11,
-      "premium": 25579.68
+      "policies": 7,
+      "premium": 14236.48
     },
     "Commercial": {
-      "policies": 3,
-      "premium": 17872.27
+      "policies": 6,
+      "premium": 27953.58
     },
     "Life": {
-      "policies": 5,
-      "premium": 8276.89
+      "policies": 2,
+      "premium": 3298.09
     }
   },
   "by_producer": {
     "Maya Chen": {
-      "premium": 13749.54,
+      "premium": 15526.37,
       "target": 14000,
-      "pct_of_target": 98.2
+      "pct_of_target": 110.9
     },
     "Luis Ortega": {
-      "premium": 13357.22,
+      "premium": 11550.46,
       "target": 12000,
-      "pct_of_target": 111.3
+      "pct_of_target": 96.3
     },
     "Priya Raman": {
-      "premium": 17460.77,
+      "premium": 18996.71,
       "target": 15000,
-      "pct_of_target": 116.4
+      "pct_of_target": 126.6
     },
     "Tom Becker": {
-      "premium": 9015.92,
+      "premium": 9746.45,
       "target": 10000,
-      "pct_of_target": 90.2
+      "pct_of_target": 97.5
     },
     "Aisha Bello": {
-      "premium": 11501.34,
+      "premium": 11957.86,
       "target": 11000,
-      "pct_of_target": 104.6
+      "pct_of_target": 108.7
     },
     "Grant Fowler": {
-      "premium": 7060.25,
+      "premium": 6529.59,
       "target": 12000,
-      "pct_of_target": 58.8
+      "pct_of_target": 54.4
     }
   }
 }

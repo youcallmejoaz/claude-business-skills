@@ -1,0 +1,41 @@
+{
+  "key": "db39a0bf6c05d00f",
+  "input": "data/customer_messages/m03_flood.txt",
+  "response": {
+    "greeting": "Hi Jonah,",
+    "sentences": [
+      {
+        "text": "I'm sorry to hear about the water in your basement.",
+        "type": "courtesy",
+        "faq_ids": []
+      },
+      {
+        "text": "Standard home policies do not cover flood.",
+        "type": "fact",
+        "faq_ids": [
+          "FAQ-18"
+        ]
+      },
+      {
+        "text": "I'll confirm with the team whether anything on your policy applies to this water damage and get back to you.",
+        "type": "confirm",
+        "faq_ids": []
+      },
+      {
+        "text": "A separate flood policy is available, and it usually has a 30 day waiting period before coverage starts.",
+        "type": "fact",
+        "faq_ids": [
+          "FAQ-18"
+        ]
+      },
+      {
+        "text": "If you want to report damage, report the claim to your carrier first using the claims number on your ID card, and then let us know so we can help you follow up.",
+        "type": "fact",
+        "faq_ids": [
+          "FAQ-14"
+        ]
+      }
+    ],
+    "sign_off": "Best regards,\nFernhill Insurance Agency"
+  }
+}

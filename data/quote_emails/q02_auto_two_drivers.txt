@@ -1,0 +1,16 @@
+From: James Whitfield <j.whitfield@example.com>
+Subject: Auto insurance quote
+
+Hello,
+
+I'd like a quote for auto insurance for my wife and me. We have two vehicles: a 2021 Toyota Camry and a 2016 Ford F-150.
+
+Drivers:
+- James Whitfield, born 07/22/1979
+- Anna Whitfield, born 11/02/1981
+
+We live in Fernhill, ZIP 30801. Our current policy renews on December 1 and we'd like the new one to start then.
+
+Best,
+James Whitfield
+555-555-0123

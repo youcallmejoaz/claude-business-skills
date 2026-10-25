@@ -1,0 +1,53 @@
+{
+  "key": "8b8de9d6224609b7",
+  "input": "data/quote_emails/q11_bundle_forwarded_reply.txt",
+  "response": {
+    "fields": {
+      "customer_name": {
+        "value": "Owen Kowal",
+        "source": "From: Owen Kowal"
+      },
+      "contact": {
+        "value": "(555) 555-0136",
+        "source": "Owen, (555) 555-0136"
+      },
+      "line_of_business": {
+        "value": "Home and Auto",
+        "source": "we'd like a home and auto quote"
+      },
+      "effective_date": {
+        "value": "December 15",
+        "source": "Start date December 15 please"
+      },
+      "zip_code": {
+        "value": "30802",
+        "source": "9 Elm Street, Brookport 30802"
+      },
+      "property_address": {
+        "value": "9 Elm Street, Brookport",
+        "source": "House is 9 Elm Street, Brookport 30802"
+      },
+      "year_built": {
+        "value": "1978",
+        "source": "built 1978"
+      },
+      "square_feet": {
+        "value": "roughly 1,600",
+        "source": "roughly 1,600 sq ft"
+      },
+      "roof_age": {
+        "value": "about 12 years old",
+        "source": "Roof is about 12 years old"
+      },
+      "drivers": {
+        "value": "Owen Kowal; wife Leah (drives the Jeep); dates of birth not given",
+        "source": "My wife Leah drives the Jeep"
+      },
+      "vehicles": {
+        "value": "2018 Mazda CX-5; 2015 Jeep Wrangler",
+        "source": "It's a 2018 Mazda CX-5 and a 2015 Jeep Wrangler"
+      }
+    },
+    "notes": "Details split across two emails in the thread. Ask for both drivers' dates of birth."
+  }
+}

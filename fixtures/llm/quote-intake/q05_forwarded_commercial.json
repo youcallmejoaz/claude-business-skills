@@ -1,0 +1,41 @@
+{
+  "key": "f823b79b8c3f0ddf",
+  "input": "data/quote_emails/q05_forwarded_commercial.txt",
+  "response": {
+    "fields": {
+      "customer_name": {
+        "value": "Hannah Brennan (with partner Diego Castillo)",
+        "source": "Thanks, Hannah"
+      },
+      "contact": {
+        "value": "(555) 555-0148",
+        "source": "(555) 555-0148"
+      },
+      "line_of_business": {
+        "value": "Commercial: general liability",
+        "source": "we need general liability before we open"
+      },
+      "effective_date": {
+        "value": "January 5 (opening date)",
+        "source": "Opening date is January 5"
+      },
+      "zip_code": {
+        "value": "30805",
+        "source": "7 Mill Road, Millbrook 30805"
+      },
+      "business_type": {
+        "value": "Bakery (Rise & Shine Bakery)",
+        "source": "We're Rise & Shine Bakery"
+      },
+      "annual_revenue": {
+        "value": "about $420,000 (year one projection)",
+        "source": "Revenue projection for year one is about $420,000"
+      },
+      "employee_count": {
+        "value": "6 to start",
+        "source": "We'll have 6 employees to start"
+      }
+    },
+    "notes": "New business, not yet open, so years in business is likely zero; confirm. Request came from the landlord's requirement. Address: 7 Mill Road, Millbrook."
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "key": "1d501ea459c72e04",
+  "input": "data/quote_emails/q22_auto_spanish_mix.txt",
+  "response": {
+    "fields": {
+      "customer_name": {
+        "value": "Adrian Duarte",
+        "source": "Adrian Duarte 555-555-0170"
+      },
+      "contact": {
+        "value": "555-555-0170",
+        "source": "Adrian Duarte 555-555-0170"
+      },
+      "line_of_business": {
+        "value": "Auto",
+        "source": "I need car insurance"
+      },
+      "effective_date": {
+        "value": "when possible",
+        "source": "Start when possible"
+      },
+      "zip_code": {
+        "value": "30802",
+        "source": "I live in Brookport, 30802"
+      },
+      "drivers": {
+        "value": "Adrian Duarte, only driver, born 08/08/1992",
+        "source": "Only me driving, born 08/08/1992"
+      },
+      "vehicles": {
+        "value": "2016 Chevrolet Malibu",
+        "source": "a 2016 Chevrolet Malibu"
+      }
+    },
+    "notes": "Customer wrote partly in Spanish; may prefer a Spanish-speaking producer."
+  }
+}

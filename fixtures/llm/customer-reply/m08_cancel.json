@@ -1,0 +1,29 @@
+{
+  "key": "55aabaef657ca0f5",
+  "input": "data/customer_messages/m08_cancel.txt",
+  "response": {
+    "greeting": "Hi Ruby,",
+    "sentences": [
+      {
+        "text": "Thanks for letting us know you sold the Elantra.",
+        "type": "courtesy",
+        "faq_ids": []
+      },
+      {
+        "text": "To cancel, send us your request in writing, by email or letter, with the date you want the policy to end.",
+        "type": "fact",
+        "faq_ids": [
+          "FAQ-20"
+        ]
+      },
+      {
+        "text": "Any refund of unused premium is paid by the carrier and usually arrives within 30 days.",
+        "type": "fact",
+        "faq_ids": [
+          "FAQ-20"
+        ]
+      }
+    ],
+    "sign_off": "Best regards,\nFernhill Insurance Agency"
+  }
+}

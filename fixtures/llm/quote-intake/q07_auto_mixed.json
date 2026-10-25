@@ -1,0 +1,33 @@
+{
+  "key": "4d2812b2e2087559",
+  "input": "data/quote_emails/q07_auto_mixed.txt",
+  "response": {
+    "fields": {
+      "customer_name": {
+        "value": "Samuel Delgado (Sam)",
+        "source": "From: Samuel Delgado"
+      },
+      "contact": {
+        "value": "sam.delgado@example.com",
+        "source": "sam.delgado@example.com"
+      },
+      "line_of_business": {
+        "value": "Auto",
+        "source": "need to add my son to insurance or get him his own policy"
+      },
+      "zip_code": {
+        "value": "30803",
+        "source": "we're at 30803"
+      },
+      "drivers": {
+        "value": "Son, licensed in august (name and date of birth not given)",
+        "source": "he just got his license in august"
+      },
+      "vehicles": {
+        "value": "2012 Civic",
+        "source": "car is a 2012 Civic"
+      }
+    },
+    "notes": "Wants to compare adding his son to the family policy against a separate policy. Ask for the son's name and date of birth."
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "key": "382f31fc5671e6f8",
+  "input": "data/customer_messages/m04_rate_increase.txt",
+  "response": {
+    "greeting": "Hi Sofia,",
+    "sentences": [
+      {
+        "text": "Thanks for letting us know, and I understand an increase like that is frustrating.",
+        "type": "courtesy",
+        "faq_ids": []
+      },
+      {
+        "text": "Carriers set rates based on claim costs in your area as well as your own history, so a rate can go up even without an accident.",
+        "type": "fact",
+        "faq_ids": [
+          "FAQ-27"
+        ]
+      },
+      {
+        "text": "We can compare your policy with our other carriers to look for a better price.",
+        "type": "fact",
+        "faq_ids": [
+          "FAQ-27"
+        ]
+      },
+      {
+        "text": "I'll confirm the specific reason for your renewal increase with the team and get back to you.",
+        "type": "confirm",
+        "faq_ids": []
+      }
+    ],
+    "sign_off": "Best regards,\nFernhill Insurance Agency"
+  }
+}

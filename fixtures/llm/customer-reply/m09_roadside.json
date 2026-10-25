@@ -1,0 +1,36 @@
+{
+  "key": "826ddba8048eee9f",
+  "input": "data/customer_messages/m09_roadside.txt",
+  "response": {
+    "greeting": "Hi Marcus,",
+    "sentences": [
+      {
+        "text": "Sorry to hear about the breakdown.",
+        "type": "courtesy",
+        "faq_ids": []
+      },
+      {
+        "text": "Roadside assistance depends on your policy and carrier.",
+        "type": "fact",
+        "faq_ids": [
+          "FAQ-16"
+        ]
+      },
+      {
+        "text": "If you send us your policy number, we will check whether it is included.",
+        "type": "fact",
+        "faq_ids": [
+          "FAQ-16"
+        ]
+      },
+      {
+        "text": "Your policy will cover the full cost of the tow.",
+        "type": "fact",
+        "faq_ids": [
+          "FAQ-16"
+        ]
+      }
+    ],
+    "sign_off": "Best regards,\nFernhill Insurance Agency"
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "key": "12e4a807b4f7ded0",
+  "input": "data/quote_emails/q09_home_detailed.txt",
+  "response": {
+    "fields": {
+      "customer_name": {
+        "value": "Nathan Lindqvist",
+        "source": "Nathan Lindqvist"
+      },
+      "contact": {
+        "value": "nathan.lindqvist@example.com",
+        "source": "nathan.lindqvist@example.com"
+      },
+      "line_of_business": {
+        "value": "Home",
+        "source": "Please quote homeowners insurance for"
+      },
+      "effective_date": {
+        "value": "October 30",
+        "source": "We'd want coverage starting October 30"
+      },
+      "zip_code": {
+        "value": "30801",
+        "source": "52 Birch Court, Fernhill 30801"
+      },
+      "property_address": {
+        "value": "52 Birch Court, Fernhill",
+        "source": "Address: 52 Birch Court, Fernhill 30801"
+      },
+      "year_built": {
+        "value": "2008",
+        "source": "Built: 2008"
+      },
+      "square_feet": {
+        "value": "1,850",
+        "source": "Size: 1,850 square feet"
+      },
+      "roof_age": {
+        "value": "replaced in 2019",
+        "source": "Roof: replaced in 2019"
+      }
+    },
+    "notes": "Brick construction. No claims in the last 5 years."
+  }
+}

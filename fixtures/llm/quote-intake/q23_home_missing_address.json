@@ -1,0 +1,41 @@
+{
+  "key": "952c13a26fcbd2d3",
+  "input": "data/quote_emails/q23_home_missing_address.txt",
+  "response": {
+    "fields": {
+      "customer_name": {
+        "value": "Zoe Albright",
+        "source": "Zoe Albright"
+      },
+      "contact": {
+        "value": "zoe.albright@example.com",
+        "source": "zoe.albright@example.com"
+      },
+      "line_of_business": {
+        "value": "Home",
+        "source": "need homeowners insurance"
+      },
+      "effective_date": {
+        "value": "next month, at closing (exact date not given)",
+        "source": "we're closing on a house next month"
+      },
+      "zip_code": {
+        "value": "30804",
+        "source": "Zip is 30804"
+      },
+      "year_built": {
+        "value": "2005",
+        "source": "It's a 2005 build"
+      },
+      "square_feet": {
+        "value": "around 2,000",
+        "source": "around 2,000 sq ft"
+      },
+      "roof_age": {
+        "value": "newer roof (2021)",
+        "source": "newer roof (2021)"
+      }
+    },
+    "notes": "Ask for the closing date and the property address."
+  }
+}

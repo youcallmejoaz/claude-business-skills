@@ -1,0 +1,45 @@
+{
+  "key": "672a8cfd37d6cff1",
+  "input": "data/quote_emails/q21_commercial_restaurant.txt",
+  "response": {
+    "fields": {
+      "customer_name": {
+        "value": "Theo Hartley",
+        "source": "Theo"
+      },
+      "contact": {
+        "value": "(555) 555-0127",
+        "source": "Call (555) 555-0127"
+      },
+      "line_of_business": {
+        "value": "Commercial: general liability, property and workers' compensation",
+        "source": "We need general liability, property and workers comp"
+      },
+      "effective_date": {
+        "value": "March 1 (current policies expire)",
+        "source": "Current policies expire March 1"
+      },
+      "zip_code": {
+        "value": "30801",
+        "source": "Hartley's Diner in Fernhill 30801"
+      },
+      "business_type": {
+        "value": "Restaurant (Hartley's Diner)",
+        "source": "I own Hartley's Diner"
+      },
+      "annual_revenue": {
+        "value": "roughly $1.2M",
+        "source": "Revenue roughly $1.2M"
+      },
+      "employee_count": {
+        "value": "12",
+        "source": "12 employees"
+      },
+      "years_in_business": {
+        "value": "since 2011",
+        "source": "In business since 2011"
+      }
+    },
+    "notes": ""
+  }
+}

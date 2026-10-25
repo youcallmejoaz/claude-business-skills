@@ -1,0 +1,34 @@
+{
+  "key": "a2eee63981d0666c",
+  "input": "data/customer_messages/m10_payment_plan.txt",
+  "response": {
+    "greeting": "Hi Elena,",
+    "sentences": [
+      {
+        "text": "Thanks for asking.",
+        "type": "courtesy",
+        "faq_ids": []
+      },
+      {
+        "text": "Yes, most policies can be paid monthly, quarterly, every six months or once a year.",
+        "type": "fact",
+        "faq_ids": [
+          "FAQ-09"
+        ]
+      },
+      {
+        "text": "Some carriers add a small installment fee for monthly payments.",
+        "type": "fact",
+        "faq_ids": [
+          "FAQ-09"
+        ]
+      },
+      {
+        "text": "I'll confirm whether your carrier does with the team and get back to you.",
+        "type": "confirm",
+        "faq_ids": []
+      }
+    ],
+    "sign_off": "Best regards,\nFernhill Insurance Agency"
+  }
+}

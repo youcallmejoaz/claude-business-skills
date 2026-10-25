@@ -1,0 +1,41 @@
+{
+  "key": "c0d523bfa011ad3c",
+  "input": "data/quote_emails/q15_home_condo.txt",
+  "response": {
+    "fields": {
+      "customer_name": {
+        "value": "Isaac Holloway",
+        "source": "From: Isaac Holloway"
+      },
+      "contact": {
+        "value": "(555) 555-0158",
+        "source": "My number is (555) 555-0158"
+      },
+      "line_of_business": {
+        "value": "Home (condo)",
+        "source": "Condo insurance quote"
+      },
+      "effective_date": {
+        "value": "November 20 (closing)",
+        "source": "Closing is on November 20"
+      },
+      "zip_code": {
+        "value": "30803",
+        "source": "Linden Bay 30803"
+      },
+      "property_address": {
+        "value": "300 Harbor View, Unit 4B, Linden Bay",
+        "source": "300 Harbor View, Unit 4B, Linden Bay"
+      },
+      "year_built": {
+        "value": "2015",
+        "source": "It was built in 2015"
+      },
+      "square_feet": {
+        "value": "980",
+        "source": "980 square feet"
+      }
+    },
+    "notes": "Lender needs proof of insurance before closing. Roof age may be covered by the condo association; confirm."
+  }
+}

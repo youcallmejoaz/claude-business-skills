@@ -1,0 +1,41 @@
+{
+  "key": "3a76c2737e38f139",
+  "input": "data/quote_emails/q06_life_term.txt",
+  "response": {
+    "fields": {
+      "customer_name": {
+        "value": "Olivia Haines",
+        "source": "Olivia Haines"
+      },
+      "contact": {
+        "value": "555-555-0152",
+        "source": "Phone 555-555-0152"
+      },
+      "line_of_business": {
+        "value": "Life: 20 year term",
+        "source": "I am looking for a 20 year term life policy"
+      },
+      "effective_date": {
+        "value": "as soon as possible",
+        "source": "Would like it in place as soon as possible"
+      },
+      "zip_code": {
+        "value": "30806",
+        "source": "I live in Stonebridge 30806"
+      },
+      "date_of_birth": {
+        "value": "05/30/1990",
+        "source": "born 05/30/1990"
+      },
+      "coverage_amount": {
+        "value": "around $500,000",
+        "source": "around $500,000 of coverage"
+      },
+      "tobacco_use": {
+        "value": "No (non-smoker)",
+        "source": "I'm a non-smoker"
+      }
+    },
+    "notes": ""
+  }
+}

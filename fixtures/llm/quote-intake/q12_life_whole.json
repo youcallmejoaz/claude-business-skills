@@ -1,0 +1,37 @@
+{
+  "key": "d75b1b0e970cc105",
+  "input": "data/quote_emails/q12_life_whole.txt",
+  "response": {
+    "fields": {
+      "customer_name": {
+        "value": "Leah Esposito (and husband Caleb)",
+        "source": "From: Leah Esposito"
+      },
+      "contact": {
+        "value": "leah.esposito@example.com",
+        "source": "You can reach me at leah.esposito@example.com"
+      },
+      "line_of_business": {
+        "value": "Life: whole life, two people",
+        "source": "We'd like quotes on whole life for both of us"
+      },
+      "zip_code": {
+        "value": "30801",
+        "source": "We're in Fernhill (30801)"
+      },
+      "date_of_birth": {
+        "value": "Leah 09/12/1985; Caleb 01/27/1983",
+        "source": "I was born 09/12/1985 and my husband Caleb was born 01/27/1983"
+      },
+      "coverage_amount": {
+        "value": "maybe $250,000 each",
+        "source": "Maybe $250,000 each?"
+      },
+      "tobacco_use": {
+        "value": "No, neither smokes",
+        "source": "Neither of us smokes"
+      }
+    },
+    "notes": "Two applicants: quote each separately."
+  }
+}

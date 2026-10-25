@@ -56,7 +56,10 @@ def week_days(week: int) -> list[dt.date]:
 
 
 def make_customers(rng: random.Random) -> list[dict]:
-    names, seen = [], set()
+    # Existing customers who appear in the sample customer messages come first.
+    names = ["Maria Lopez", "James Whitfield", "Jonah Quill", "Sofia Marsh", "Isaac Holloway",
+             "Nora Ruiz", "Owen Kowal", "Ruby Ferreira", "Marcus Okafor", "Elena Novak"]
+    seen = set(names)
     while len(names) < 40:
         n = f"{rng.choice(FIRST)} {rng.choice(LAST)}"
         if n not in seen:
@@ -87,8 +90,8 @@ def make_quotes(rng: random.Random, customers: list[dict]) -> list[dict]:
     rows = []
     for i in range(1, 31):
         c = rng.choice(customers)
-        requested = as_of - dt.timedelta(days=rng.randint(0, 38))
-        status = rng.choices(["Open", "Quoted", "Bound", "Lost"], weights=[4, 3, 3, 1])[0]
+        requested = as_of - dt.timedelta(days=rng.randint(0, 30))
+        status = rng.choices(["Open", "Quoted", "Bound", "Lost"], weights=[2, 2, 5, 1])[0]
         last_contact = min(as_of, requested + dt.timedelta(days=rng.randint(0, 6)))
         rows.append({
             "quote_id": f"Q-{1000 + i}",
@@ -265,6 +268,7 @@ def sync_knowledge() -> None:
 
 
 def main() -> None:
+    # Separate random streams, so changing one dataset never shifts the others.
     rng = random.Random(42)
     (DATA / "production").mkdir(parents=True, exist_ok=True)
     customers = make_customers(rng)
@@ -272,20 +276,21 @@ def main() -> None:
         w = csv.DictWriter(f, fieldnames=list(customers[0]))
         w.writeheader()
         w.writerows(customers)
-    quotes = make_quotes(rng, customers)
+    quotes = make_quotes(random.Random(7), customers)
     with open(DATA / "quotes.csv", "w", newline="") as f:
         w = csv.DictWriter(f, fieldnames=list(quotes[0]))
         w.writeheader()
         w.writerows(quotes)
 
     names = [c["name"] for c in customers]
+    prod_rng = random.Random(2026)
     used: set = set()
     expected_dir = ROOT / "evals" / "expected"
     expected_dir.mkdir(parents=True, exist_ok=True)
     for week in WEEKS:
-        data = make_week(rng, week, names, used)
+        data = make_week(prod_rng, week, names, used)
         path = DATA / "production" / f"production_{YEAR}-W{week:02d}.xlsx"
-        write_workbook(path, week, data, rng, skipped_row=(week == 40))
+        write_workbook(path, week, data, prod_rng, skipped_row=(week == 40))
         (expected_dir / f"production_{YEAR}-W{week:02d}.json").write_text(
             json.dumps(expected_totals(week, data), indent=2) + "\n")
     sync_knowledge()

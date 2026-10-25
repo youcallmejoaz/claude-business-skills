@@ -1,0 +1,11 @@
+{
+  "key": "2026-W43",
+  "total_premium": 72318.03,
+  "response": {
+    "headline": "{{total_premium}} written, {{pct_of_target}} of target, with Grant Fowler still behind",
+    "paragraphs": [
+      "The agency wrote {{policies_written}} policies this week, {{new_policies}} new and {{renewal_policies}} renewals, and kept {{retention_rate}} of the renewals that came due. Premium was {{wow_direction}} {{wow_change_pct}} on last week, and commercial brought in {{line.commercial.premium}}.",
+      "Grant Fowler is at {{producer.grant_fowler.pct_of_target}} of target with {{producer.grant_fowler.premium}} written, the eighth week in a row below the line, although he kept all of his renewals. The file does not say why new business is low, so a short check-in on his pipeline this week is the next step. Priya Raman led the team at {{producer.priya_raman.pct_of_target}}."
+    ]
+  }
+}

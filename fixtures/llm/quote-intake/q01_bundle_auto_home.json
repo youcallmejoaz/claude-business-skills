@@ -1,0 +1,53 @@
+{
+  "key": "aaeb39b27be4cfe0",
+  "input": "data/quote_emails/q01_bundle_auto_home.txt",
+  "response": {
+    "fields": {
+      "customer_name": {
+        "value": "Maria Lopez",
+        "source": "From: Maria Lopez"
+      },
+      "contact": {
+        "value": "(555) 555-0117",
+        "source": "call me at (555) 555-0117 after 3pm if easier"
+      },
+      "line_of_business": {
+        "value": "Home and Auto",
+        "source": "we just bought a house at 18 Orchard Lane in Brookport (30802) and want to move our car insurance over too"
+      },
+      "effective_date": {
+        "value": "Nov 14 (home, closing day)",
+        "source": "closing is Nov 14 so we'd need the home policy to start that day"
+      },
+      "zip_code": {
+        "value": "30802",
+        "source": "18 Orchard Lane in Brookport (30802)"
+      },
+      "property_address": {
+        "value": "18 Orchard Lane, Brookport",
+        "source": "we just bought a house at 18 Orchard Lane in Brookport"
+      },
+      "year_built": {
+        "value": "1994",
+        "source": "the house was built in 1994"
+      },
+      "square_feet": {
+        "value": "about 2,100",
+        "source": "about 2,100 sq ft"
+      },
+      "drivers": {
+        "value": "Maria Lopez, only driver, DOB 03/14/1988",
+        "source": "I'm the only driver (dob 03/14/1988)"
+      },
+      "vehicles": {
+        "value": "2019 Honda CR-V",
+        "source": "car is a 2019 Honda CR-V"
+      },
+      "current_premium": {
+        "value": "around $1,380 a year (auto)",
+        "source": "paying around $1,380 a year for the car"
+      }
+    },
+    "notes": "Roof age unknown; customer says the inspection report has it. Start date given for the home policy only; confirm when the auto policy should start. Prefers a call after 3pm."
+  }
+}

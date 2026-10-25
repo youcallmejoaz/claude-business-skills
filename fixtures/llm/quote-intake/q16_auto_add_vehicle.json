@@ -1,0 +1,41 @@
+{
+  "key": "ac0a02aaa58aacf5",
+  "input": "data/quote_emails/q16_auto_add_vehicle.txt",
+  "response": {
+    "fields": {
+      "customer_name": {
+        "value": "Ruby Ferreira",
+        "source": "Ruby Ferreira, 04/18/1987"
+      },
+      "contact": {
+        "value": "ruby.ferreira@example.com",
+        "source": "ruby.ferreira@example.com"
+      },
+      "line_of_business": {
+        "value": "Auto",
+        "source": "2 cars: 2017 Hyundai Elantra, 2022 Kia Sportage"
+      },
+      "effective_date": {
+        "value": "January 10 (renewal)",
+        "source": "Our renewal is January 10"
+      },
+      "zip_code": {
+        "value": "30804",
+        "source": "Zip 30804"
+      },
+      "drivers": {
+        "value": "Ruby Ferreira, 04/18/1987; Felix Ashby, 10/09/1986",
+        "source": "Drivers me (Ruby Ferreira, 04/18/1987) and my partner Felix Ashby (10/09/1986)"
+      },
+      "vehicles": {
+        "value": "2017 Hyundai Elantra; 2022 Kia Sportage",
+        "source": "2 cars: 2017 Hyundai Elantra, 2022 Kia Sportage"
+      },
+      "current_premium": {
+        "value": "$2,100 per year",
+        "source": "We pay $2,100 per year now"
+      }
+    },
+    "notes": "Currently with another agency; comparing."
+  }
+}

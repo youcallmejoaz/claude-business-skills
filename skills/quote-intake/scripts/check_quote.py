@@ -28,7 +28,7 @@ CHECKLIST = HERE.parent / "reference" / "quote-checklist.md"
 
 LINE_WORDS = {
     "Auto": ["auto", "car", "vehicle", "truck", "suv", "van", "driver"],
-    "Home": ["home", "house", "homeowner", "property", "condo", "dwelling"],
+    "Home": ["home", "house", "homeowner", "condo", "dwelling"],
     "Commercial": ["commercial", "business", "liability", "workers", "shop", "bakery", "company"],
     "Life": ["life", "term", "whole life"],
 }

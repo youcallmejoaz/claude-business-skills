@@ -1,0 +1,45 @@
+{
+  "key": "f7ebabc4f5779e12",
+  "input": "data/quote_emails/q19_home_and_flood.txt",
+  "response": {
+    "fields": {
+      "customer_name": {
+        "value": "Jonah Quill",
+        "source": "Jonah Quill"
+      },
+      "contact": {
+        "value": "(555) 555-0119",
+        "source": "(555) 555-0119"
+      },
+      "line_of_business": {
+        "value": "Home, plus a separate flood policy",
+        "source": "we'd like flood insurance as well as the regular home policy"
+      },
+      "effective_date": {
+        "value": "December 3",
+        "source": "We'd like both to start on December 3"
+      },
+      "zip_code": {
+        "value": "30805",
+        "source": "41 Riverside Drive, Millbrook 30805"
+      },
+      "property_address": {
+        "value": "41 Riverside Drive, Millbrook",
+        "source": "We're moving to 41 Riverside Drive, Millbrook 30805"
+      },
+      "year_built": {
+        "value": "1962",
+        "source": "The house is from 1962"
+      },
+      "square_feet": {
+        "value": "2,400",
+        "source": "2,400 sq ft"
+      },
+      "roof_age": {
+        "value": "6 years old",
+        "source": "roof is 6 years old"
+      }
+    },
+    "notes": "Flood policy usually has a waiting period; producer to explain timing against the December 3 start."
+  }
+}

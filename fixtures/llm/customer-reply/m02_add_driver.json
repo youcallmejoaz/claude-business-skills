@@ -1,0 +1,29 @@
+{
+  "key": "76ceea50b883b168",
+  "input": "data/customer_messages/m02_add_driver.txt",
+  "response": {
+    "greeting": "Hi James,",
+    "sentences": [
+      {
+        "text": "Congratulations to your son on getting his license.",
+        "type": "courtesy",
+        "faq_ids": []
+      },
+      {
+        "text": "To add him, please send us his full name, date of birth, driver's license number and the date he was first licensed.",
+        "type": "fact",
+        "faq_ids": [
+          "FAQ-11"
+        ]
+      },
+      {
+        "text": "The change takes effect once we confirm it to you in writing.",
+        "type": "fact",
+        "faq_ids": [
+          "FAQ-11"
+        ]
+      }
+    ],
+    "sign_off": "Best regards,\nFernhill Insurance Agency"
+  }
+}
